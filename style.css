@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset and base styles */
 * {
     margin: 0;
@@ -230,3 +231,27 @@ footer {
         width: 100%;
     }
 }
+=======
+.menulist
+{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+#img1, #img2, #img3, #img4, #img5 path
+{
+    fill: blueviolet;
+}
+.reviewclass
+{
+    position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-45%, -45%);
+}
+>>>>>>> 7ad19bcd0126a91540bfbb2e30e13d75bd58246b
