@@ -1,22 +1,47 @@
-.menulist
+.container
 {
-    list-style: none;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.container-fluid
+{
+    background-color: #1D2065;
     display: flex;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
-a
+.star-rating 
 {
-    text-decoration: none;
-    color: black;
-}
-#img1, #img2, #img3, #img4, #img5 path
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 200px;
+}  
+.reviewtxtarea
 {
-    fill: blueviolet;
+    margin-top: 30px;
+    margin-left: 550px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
 }
-.reviewclass
+input[type="radio"]
 {
-    position: absolute;
-  top: 45%;
-  left: 45%;
-  transform: translate(-45%, -45%);
+    display: none;
 }
+.star 
+{
+    width: 30px;
+    height: 30px;
+    background-image: url('star-regular\ \(2\).svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+input:checked ~ label 
+{
+    background-image: url('star-solid\ \(3\).svg');
+}
+.star:hover, .star:hover ~ label 
+{
+    background-image: url('star-solid\ \(3\).svg');
+} 
