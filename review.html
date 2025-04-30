@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Library</title>
+    <title>yehiabranch</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="code.js"></script>
 </head>
-<body style="background-color: #1c1c50">
+<body style="background-color: #1c1c50;">
     <header>
-
-        <nav class="navbar navbar-expand justify-content-center"> 
+        <nav class="navbar navbar-expand justify-content-center">    
             <ul class="navbar-nav align-items-center">
+                
                 <li class="nav-item me-5 ">
                     <div class="licontainer">
                         <a href="index.html"><img src="home.png" width="25" height="25" style="margin-top: 10px;"></a>
@@ -46,23 +46,27 @@
         </nav>
         <hr id="navline">
     </header>
-
-    <div class="cstmhero container d-flex align-items-center justify-content-between flex-column flex-lg-row text-center text-lg-start">   
-        <div class="col-lg-6">
-
-            <h1 style="font-size: 3rem; font-weight: bold; color: white;">Discover and Read Amazing Books</h1>
-            <p style="font-size: 1.2rem; margin-top: 20px; color: white">Explore our library and find books across genres, from classics to new releases. All in one place.</p>
-
-            <div class="mt-4">
-                <a href="#" class="cstmbtn">Browse Books</a>
-                <a href="#" class="btn btn-outline-light">Sign Up</a>
-            </div>
-
+    <div class="reviewcontainer">
+        <div class="star-rating">
+            <input type="radio" name="rating" id="star5" />
+            <label for="star5" class="star"></label>
+          
+            <input type="radio" name="rating" id="star4" />
+            <label for="star4" class="star"></label>
+          
+            <input type="radio" name="rating" id="star3" />
+            <label for="star3" class="star"></label>
+          
+            <input type="radio" name="rating" id="star2" />
+            <label for="star2" class="star"></label>
+          
+            <input type="radio" name="rating" id="star1" />
+            <label for="star1" class="star"></label>
+          </div>         
+        <div>
+            <textarea rows="8" cols="25" placeholder="tell us more" class="reviewtxtarea"></textarea>
         </div>
-        
-            <div class="col-lg-5 mt-5 mt-lg-0">
-                <img src="2232688.png" class="hero-img" alt="Library Illustration"/>
-            </div>
-    </div>
+        <input type="submit" class="btn btn-success" style="margin-left: 730px; margin-top: 70px;">
+    </div>   
 </body>
 </html>
