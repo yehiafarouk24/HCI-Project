@@ -9,26 +9,44 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="code.js"></script>
 </head>
-<body>
+<body style="background-color: #1c1c50;">
     <header>
-        <nav class="navbar navbar-expand bg-light mx-5 ">
-            <ul class="navbar-nav">
-                <li class="nav-item me-3 mx-5">
-                    <a class="nav-link active" href="index.html">Home</a>
+        <nav class="navbar navbar-expand justify-content-center">    
+            <ul class="navbar-nav align-items-center">
+                
+                <li class="nav-item me-5 ">
+                    <div class="licontainer">
+                        <a href="index.html"><img src="home.png" width="25" height="25" style="margin-top: 10px;"></a>
+                        <a class="cstm-navlink" href="index.html">Home</a>
+                    </div>
                 </li>
-                <li class="nav-item me-3 mx-5">
-                    <a class="nav-link active" href="#">Menu</a>
+
+                <li class="nav-item me-5">
+                    <div class="licontainer">
+                        <a href="#"><img src="menu copy.png" width="20" height="15"></a>
+                        <a class="cstm-navlink" href="#">Menu</a>
+                    </div>
                 </li>
-                <li class="nav-item me-3 mx-5">
-                    <a class="nav-link active" href="#">About Us</a>
+
+                <li class="nav-item me-5">
+                    <div class="licontainer">
+                        <img src="about us.png" width="20" height="20">
+                        <a class="cstm-navlink" href="#">About Us</a>
+                    </div>
                 </li>
-                <li class="nav-item mx-5">
-                    <a class="nav-link active" href="review.html">Review</a>
+
+                <li class="nav-item"></li>
+                    <div class="licontainer">
+                        <a href="review.html"><img src="review.png" width="20" height="20"></a>
+                        <a class="cstm-navlink" href="review.html">Review</a>
+                    </div>
                 </li>
+            
             </ul>
         </nav>
+        <hr id="navline">
     </header>
-    <div class="container">
+    <div class="reviewcontainer">
         <div class="star-rating">
             <input type="radio" name="rating" id="star5" />
             <label for="star5" class="star"></label>
@@ -48,7 +66,7 @@
         <div>
             <textarea rows="8" cols="25" placeholder="tell us more" class="reviewtxtarea"></textarea>
         </div>
-        <input type="submit" class="btn btn-success" style="margin-left: 600px; margin-top: 70px;">
+        <input type="submit" class="btn btn-success" style="margin-left: 730px; margin-top: 70px;">
     </div>   
 </body>
 </html>

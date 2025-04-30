@@ -1,18 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
-.container
+.reviewcontainer
 {
     border-radius: 10px;
     justify-content: center;
     align-items: center;
 }
-.container-fluid
+.cstmhero
 {
-    text-decoration-color: aliceblue;
-    font-family: 'Outfit', sans-serif;
-    background-color: #828398;
+    padding: 120px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.hero-img 
+{
+    max-width: 100%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float
+{
+    0%, 100% 
+    {
+      transform: translateY(0);
+    }
+    50% 
+    {
+      transform: translateY(-10px);
+    }
+}
+.cstmbtn
+{
+    text-decoration: none;
+    background-color: #7b61ff;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 25px;
+    margin-right: 10px;
+    animation: 1s ease-in-out;
+}
+.licontainer
+{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding:7px;
+}
+.licontainer:hover
+{
+    background-color: #7b61ff;
+    border-radius: 9px;
+}
+.cstm-navlink
+{
+    text-decoration: none;
+    padding-left: 15px;
+    color: white;
 }
 .star-rating 
 {
@@ -24,7 +69,7 @@
 .reviewtxtarea
 {
     margin-top: 30px;
-    margin-left: 550px;
+    margin-left: 650px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 5px;
 }
@@ -47,4 +92,11 @@ input:checked ~ label
 .star:hover, .star:hover ~ label 
 {
     background-image: url('star-solid\ \(3\).svg');
-} 
+}
+#navline
+{
+    border: solid 3px white;
+    width: 37%;
+    text-align:center;
+    margin-left: 485px;
+}
