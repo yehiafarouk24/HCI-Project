@@ -12,26 +12,27 @@
 <body style="background-color: #1c1c50">
     <header>
 
-        <nav class="navbar navbar-expand justify-content-center"> 
-            <ul class="navbar-nav align-items-center">
+        <nav class="navbar navbar-expand justify-content-left"> 
+            <ul class="navbar-nav align-items-left">
+
+                <li class="nav-item me-5">
+                    <div class="licontainer" style="padding-left: 8px; padding-right: 8px;">
+                        <a href="#"><img src="menu copy.png" width="20" height="15"></a>
+                    </div>
+                </li>
+
                 <li class="nav-item me-5 ">
                     <div class="licontainer">
-                        <a href="index.html"><img src="home.png" width="25" height="25" style="margin-top: 10px;"></a>
+                        <a href="index.html"><img src="home.png" width="25" height="25" style="transform: translateY(4px);"></a>
                         <a class="cstm-navlink" href="index.html">Home</a>
                     </div>
                 </li>
 
-                <li class="nav-item me-5">
-                    <div class="licontainer">
-                        <a href="#"><img src="menu copy.png" width="20" height="15"></a>
-                        <a class="cstm-navlink" href="#">Menu</a>
-                    </div>
-                </li>
 
                 <li class="nav-item me-5">
                     <div class="licontainer">
                         <img src="about us.png" width="20" height="20">
-                        <a class="cstm-navlink" href="#">About Us</a>
+                        <a class="cstm-navlink" href="about-us.html">About Us</a>
                     </div>
                 </li>
 
@@ -41,8 +42,13 @@
                         <a class="cstm-navlink" href="review.html">Review</a>
                     </div>
                 </li>
-            
             </ul>
+
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search.." style="padding-bottom: 1px;">
+                <input type="image" src="Search.png" width="25" height="25">
+            </div>
+
         </nav>
         <hr id="navline">
     </header>
