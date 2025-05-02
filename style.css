@@ -204,3 +204,7 @@ input:checked ~ label
     text-align:center;
     margin-left: 115px;
 }
+.allreviews{
+    color: aqua;
+
+}
