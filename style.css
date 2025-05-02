@@ -1,36 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
-.reviewcontainer
-{
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-.cstmhero
-{
-    padding: 120px 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.hero-img 
-{
-    max-width: 100%;
-    height: auto;
-    animation: float 3s ease-in-out infinite;
-}
+/* Aimation */
 
 @keyframes float
 {
     0%, 100% 
     {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     50% 
     {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
 }
 
@@ -38,37 +19,36 @@
 {
     0%, 100% 
     {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     50% 
     {
-      transform: translateX(-6px);
+        transform: translateX(-6px);
     }
-
+    
 }
 
 @keyframes float-search-icon
 {
     0%, 100% 
     {
-        transform: translateY(-9px);
+        transform: translateY(0px);
     }
     50% 
     {
-      transform: translateX(-17px);
+        transform: translateX(-40px);
     }
+    
 }
 
-.cstmbtn
+.body
 {
-    text-decoration: none;
-    font-size: 18px;
-    background-color: #7b61ff;
-    color: white;
-    border-radius: 30px;
-    padding: 10px 25px;
-    margin-right: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
+
+/* Navigation bar */
 
 .cstmbtn:hover
 {
@@ -83,6 +63,7 @@
     align-items: center;
     margin-top: 20px;
     padding: 7px;
+    transition: all 0.5s ease;
 }
 
 .navbar-nav{
@@ -92,7 +73,7 @@
 
 .licontainer:hover
 {
-    background-color: #7b61ff;
+    background-color: #35495e;
     border-radius: 70px;
     animation: float-icon 2s ease-in-out infinite;
     opacity: 60%;
@@ -100,13 +81,13 @@
 
 .search-bar
 {
-    background-color: #7b61ff;
+    background-color: #35495e;
     border-radius: 30px;
     margin-top: 19px;
-    margin-left: 250px;
+    margin-left: 215px;
     align-items: center;
     display: inline-flex;
-    padding-left: 10px;
+    padding-left: 20px;
     overflow: hidden;
 }
 
@@ -125,7 +106,8 @@
 {
     width: 25px;
     height: 25px;
-    margin-right: 13px;
+    margin-right: 25px;
+    margin-left: 70px;
 }
 
 .search-bar input:not(:placeholder-shown) + input[type="image"]
@@ -141,7 +123,7 @@
 }
 
 #search{
-    background-color: #7b61ff;
+    background-color: transparent;
     padding: 6px;
     border: none;
     border-color: #7b61ff;
@@ -157,6 +139,170 @@
     color: white;
 }
 
+#navline
+{
+    border: solid 2px white;
+    opacity: 30%;
+    width: 84%;
+    text-align:center;
+    margin-left: 110px;
+}
+
+.nav-logo
+{
+    width: 40px;
+    margin-left: 175px;
+    margin-top: 19px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Home page */
+
+.cstmhero
+{
+    padding: 120px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.hero-img 
+{
+    max-width: 100%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+.cstmbtn
+{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #e64c3c;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin-right: 10px;
+    transition: all 0.5s ease;
+}
+
+/* About us page */
+
+.about-us-sec 
+{
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+
+}
+
+.about-us-sec h1
+{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+
+.about-us-sec img
+{
+    transform: translate(120px,-40px);
+}
+
+.about-short-line
+{
+    color: white;
+    border: solid 1px white;
+    width: 20%;
+    margin-left: 630px;
+}
+
+.our-branches-sec 
+{
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.our-branches-sec img
+{
+    transform: translate(160px,-40px);
+}
+
+.our-branches-sec li
+{
+    list-style-image: url(https://img.icons8.com/ios-filled/16/FFFFFF/marker.png)
+}
+
+.branches-short-line
+{
+    color: white;
+    border: solid 1px white;
+    width: 25%;
+    margin-left: 590px;
+}
+
+.contact-info-sec
+{
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.contact-info-sec img
+{
+    transform: translate(210px,-40px);
+}
+
+.contact-short-line
+{
+    color: white;
+    border: solid 1px white;
+    width: 35%;
+    margin-left: 500px;
+}
+
+#about-line1
+{
+    color: white;
+    border: solid 1px white;
+    width: 14%;
+    transform: translate(300px,30px);
+}
+
+#about-line2
+{
+    color: white;
+    border: solid 1px white;
+    width: 14%;
+    transform: translate(1000px,-30px);
+}
+
+#about-us-txt
+{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.social-btns {
+    width: 100%;
+    padding-block: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+.social-btns > button
+{
+    background-color: transparent ;
+    border: none;
+}
+
+/* review page */
+
 .star-rating 
 {
     display: flex;
@@ -164,6 +310,13 @@
     justify-content: center;
     margin-top: 200px;
 }  
+
+.reviewcontainer
+{
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
 
 .reviewtxtarea
 {
@@ -195,12 +348,4 @@ input:checked ~ label
 .star:hover, .star:hover ~ label 
 {
     background-image: url('star-solid\ \(3\).svg');
-}
-
-#navline
-{
-    border: solid 3px white;
-    width: 70%;
-    text-align:center;
-    margin-left: 115px;
 }
