@@ -36,7 +36,7 @@
     }
     50% 
     {
-        transform: translateX(-40px);
+        transform: translateX(-10px);
     }
     
 }
@@ -84,7 +84,7 @@
     background-color: #35495e;
     border-radius: 30px;
     margin-top: 19px;
-    margin-left: 215px;
+    margin-left: 229px;
     align-items: center;
     display: inline-flex;
     padding-left: 20px;
@@ -107,7 +107,7 @@
     width: 25px;
     height: 25px;
     margin-right: 25px;
-    margin-left: 70px;
+    margin-left: 10px;
 }
 
 .search-bar input:not(:placeholder-shown) + input[type="image"]
@@ -128,7 +128,6 @@
     border: none;
     border-color: #7b61ff;
     margin-top: 8px;
-    margin-right: 16px;
     font-size: 17px;
 }
 
@@ -151,7 +150,7 @@
 .nav-logo
 {
     width: 40px;
-    margin-left: 175px;
+    margin-left: 138px;
     margin-top: 19px;
     animation: float 3s ease-in-out infinite;
 }
@@ -370,8 +369,8 @@ input:checked ~ label
     display: flex;
     flex-direction: row;
 }
-/* bookstyle */
 
+/* bookstyle */
 
 body {
     background-color: #0a0a1a; 
@@ -379,6 +378,7 @@ body {
     margin: 0;
     padding: 20px;
   }
+  
   .custom-btn {
     background-color: transparent;
     color: white;
@@ -397,8 +397,6 @@ body {
     background-color: #3a4e5f; 
     color: white;
   }
-  
- 
   
   .download-btn {
     background-color: white;
@@ -426,7 +424,7 @@ body {
   } */
    .custom-card {
     max-width: 1000px;
-    min-width: 400px;
+    min-width: 500px;
     height: 140px;
     margin: 20px auto;
     background-color: rgba(30, 41, 59, 0.8);
@@ -448,16 +446,16 @@ body {
     display: flex;
     align-items: center;
     gap: 24px;
-    width: 100%;
+    width: 170%;
     height: 100%;
   }
   
   .card-image {
     width: 100px;
-    height: 100px;
+    height: 120px;
     border-radius: 10px;
     object-fit: cover;
-    background: #222a3a;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -480,6 +478,7 @@ body {
   }
   
   .card-description {
+    margin-top: 7px;
     margin-bottom: 12px;
     font-size: 14px;
     line-height: 1.5;
