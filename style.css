@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+
 /* Aimation */
 
 @keyframes float
@@ -66,11 +67,6 @@
     transition: all 0.5s ease;
 }
 
-.navbar-nav{
-    margin-left: 105px;
-    align-items: center;
-}
-
 .licontainer:hover
 {
     background-color: #35495e;
@@ -78,6 +74,92 @@
     animation: float-icon 2s ease-in-out infinite;
     opacity: 60%;
 }
+
+.licontainer-home
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-home:hover
+{
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.licontainer-books
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-books:hover
+{
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.licontainer-about
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-about:hover
+{
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.licontainer-rev
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-rev:hover
+{
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.navbar-nav{
+    margin-left: 105px;
+    align-items: center;
+}
+
 
 .search-bar
 {
@@ -148,6 +230,14 @@
 }
 
 .nav-logo
+{
+    width: 40px;
+    margin-left: 138px;
+    margin-top: 19px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.nav-logo-btn
 {
     width: 40px;
     margin-left: 138px;
@@ -422,6 +512,7 @@ body {
     background-color: #3a4e5f;
     color: white;
   } */
+  
    .custom-card {
     max-width: 1000px;
     min-width: 500px;
