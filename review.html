@@ -56,40 +56,128 @@
     </header>
 
     <div class="reviewcontainer">
+        <div class="usernamediv" style="margin-top: 100px;">
+            <input type="text" placeholder="Enter your name" style="border-radius: 5px; height: 35px; background-color: transparent; border-style: solid; color: white;">
+        </div>
         <div class="star-rating">
 
-            <input type="radio" name="rating" id="star5" />
+            <input type="radio" name="rating" id="star5" value="1"/>
             <label for="star5" class="star"></label>
           
-            <input type="radio" name="rating" id="star4" />
+            <input type="radio" name="rating" id="star4" value="2"/>
             <label for="star4" class="star"></label>
           
-            <input type="radio" name="rating" id="star3" />
+            <input type="radio" name="rating" id="star3" value="3"/>
             <label for="star3" class="star"></label>
           
-            <input type="radio" name="rating" id="star2" />
+            <input type="radio" name="rating" id="star2" value="4"/>
             <label for="star2" class="star"></label>
           
-            <input type="radio" name="rating" id="star1" />
+            <input type="radio" name="rating" id="star1" value="5"/>
             <label for="star1" class="star"></label>
 
-          </div>         
+        </div>         
+
         <div>
             <textarea rows="4" placeholder="tell us more" class="reviewtxtarea" required></textarea>
         </div>
-        <input  type="submit" class="btn btn-outline-light customreviewbtn">
-    </div>      
 
-    <div class="reviewcontainer2">   
-        <div class="reviewscards">
+        <input type="submit" class="btn btn-outline-light customreviewbtn" onclick="handlereviewsubmitfunc()" disabled>
 
-            <div class="card" style="width: 350px; height: 200px;">
+    </div>
+    <h2 style="margin-top: 150px; margin-left: 630px; color: white;" id="noreviewtxt" hidden>No Reviews yet 😊</h2>
+    <div class="cards-container" style="margin-top: 150px;">
+
+        <div class="col-md-3 mb-4" id = "card1" style="width: 310px;" hidden >
+            <div class="card text-center" style="background-color: #F3F3E0;">
+                <div class="card-header"></div>
                 <div class="card-body">
-                  <h5 class="card-title">Username</h5>
-                  <p class="card-text">Review.</p>
+                <h5 class="card-title"></h5>
+                <p class="card-text" style="color: black;"></p>
                 </div>
+                <div class="card-footer text-muted"></div>
             </div>
+        </div>
 
+         <div class="col-md-3 mb-4" id="card2" style="width: 310px;" hidden>
+            <div class="card text-center" style="background-color: #F3F3E0;">
+                <div class="card-header"></div>
+                <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text" style="color: black;"></p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4" id="card3" style="width: 310px;" hidden>
+            <div class="card text-center" style="background-color: #F3F3E0;">
+                <div class="card-header"></div>
+                <div class="card-body">
+                <h5 class="card-title">number of </h5>
+                <p class="card-text" style="color: black;"></p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4" id="card4" style="width: 310px;" hidden>
+            <div class="card text-center" style="background-color: #F3F3E0;">
+                <div class="card-header"></div>
+                <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text" style="color: black;"></p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-4" id="card5" style="width: 310px;" hidden>
+            <div class="card text-center" style="background-color: #F3F3E0;">
+                <div class="card-header"></div>
+                <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text" style="color: black;"></p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4" id="card6" style="width: 310px;" hidden>
+            <div class="card text-center" style="background-color: #F3F3E0;">
+                <div class="card-header"></div>
+                <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text" style="color: black;"></p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4" id="card7" style="width: 310px;" hidden>
+            <div class="card text-center" style="background-color: #F3F3E0;">
+                <div class="card-header"></div>
+                <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text" style="color: black;"></p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4" id="card8" style="width: 310px;" hidden>
+            <div class="card text-center" style="background-color: #F3F3E0;">
+                <div class="card-header"></div>
+                <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text" style="color: black;"></p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+        <div style="margin-top: 470px; margin-left: 700px; position: absolute;">
+            <img src="less-than-solid (1).svg" width="30px" height="30px" id="prevreview" hidden>
+            <img src="greater-than-solid (1).svg" width="30px" height="30px" id="nextreview" hidden>
         </div>
     </div>
 </body>
