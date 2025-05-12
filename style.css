@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+
 /* Aimation */
 
 @keyframes float
@@ -36,7 +37,7 @@
     }
     50% 
     {
-        transform: translateX(-40px);
+        transform: translateX(-10px);
     }
     
 }
@@ -66,11 +67,6 @@
     transition: all 0.5s ease;
 }
 
-.navbar-nav{
-    margin-left: 105px;
-    align-items: center;
-}
-
 .licontainer:hover
 {
     background-color: #35495e;
@@ -79,12 +75,98 @@
     opacity: 60%;
 }
 
+.licontainer-home
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-home:hover
+{
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.licontainer-books
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-books:hover
+{
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.licontainer-about
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-about:hover
+{
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.licontainer-rev
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-rev:hover
+{
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.navbar-nav{
+    margin-left: 105px;
+    align-items: center;
+}
+
+
 .search-bar
 {
     background-color: #35495e;
     border-radius: 30px;
     margin-top: 19px;
-    margin-left: 215px;
+    margin-left: 229px;
     align-items: center;
     display: inline-flex;
     padding-left: 20px;
@@ -107,7 +189,7 @@
     width: 25px;
     height: 25px;
     margin-right: 25px;
-    margin-left: 70px;
+    margin-left: 10px;
 }
 
 .search-bar input:not(:placeholder-shown) + input[type="image"]
@@ -128,7 +210,6 @@
     border: none;
     border-color: #7b61ff;
     margin-top: 8px;
-    margin-right: 16px;
     font-size: 17px;
 }
 
@@ -151,7 +232,15 @@
 .nav-logo
 {
     width: 40px;
-    margin-left: 175px;
+    margin-left: 138px;
+    margin-top: 19px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.nav-logo-btn
+{
+    width: 40px;
+    margin-left: 138px;
     margin-top: 19px;
     animation: float 3s ease-in-out infinite;
 }
@@ -357,7 +446,7 @@ input:checked ~ label
 .customreviewbtn
 {
     position: absolute;
-    margin-left: 660px;
+    margin-left: 870px;
     margin-top: 200px;
 }
 
@@ -369,4 +458,126 @@ input:checked ~ label
 {
     display: flex;
     flex-direction: row;
+}
+
+/* bookstyle */
+
+body {
+    background-color: #0a0a1a; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .custom-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: #3a4e5f; 
+    color: white;
+  }
+  
+  .custom-btn.active {
+    background-color: #3a4e5f; 
+    color: white;
+  }
+  
+  .download-btn {
+    background-color: white;
+    color: #1c1c2a;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bo
+  }
+
+  
+  /* .download-btn {
+    background-color: white;
+    color: #1c1c2a;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #3a4e5f;
+    color: white;
+  } */
+  
+   .custom-card {
+    max-width: 1000px;
+    min-width: 500px;
+    height: 140px;
+    margin: 20px auto;
+    background-color: rgba(30, 41, 59, 0.8);
+    border: 1px solid #3a4e5f;
+    border-radius: 5px;
+    padding: 16px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-card:hover {
+    background-color: #3a4e5f;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 170%;
+    height: 100%;
+  }
+  
+  .card-image {
+    width: 100px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .card-text {
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .card-title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .card-description {
+    margin-top: 7px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: white;
+  }
+.cards-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
 }
