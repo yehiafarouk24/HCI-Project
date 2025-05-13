@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Detail</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #03001C;
+            color: #fff;
+            font-family: 'Rubik', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            opacity: 0;
+            animation: fadeInPage 0.7s ease-in forwards;
+        }
+        @keyframes fadeInPage {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .book-detail-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            gap: 60px;
+            padding: 40px 20px;
+        }
+        .book-detail-info {
+            max-width: 600px;
+        }
+        .book-detail-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            line-height: 1.1;
+        }
+        .book-detail-meta {
+            display: flex;
+            gap: 30px;
+            font-size: 1rem;
+            color: #b0b0b0;
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+        .book-detail-description {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 32px;
+        }
+        .book-detail-download {
+            display: inline-block;
+            background: #35495e;
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            margin-top: 10px;
+            border: none;
+        }
+        .book-detail-download:hover {
+            background: #fff;
+            color: #03001C;
+        }
+        .book-detail-cover {
+            width: 270px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            background: #222;
+        }
+        .back-btn {
+            position: absolute;
+            top: 32px;
+            left: 32px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.2s;
+        }
+        .back-btn:hover {
+            color: #7b61ff;
+        }
+        .back-arrow {
+            font-size: 1.7rem;
+            margin-right: 8px;
+        }
+        @media (max-width: 900px) {
+            .book-detail-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 40px;
+            }
+            .book-detail-cover {
+                width: 200px;
+                height: 280px;
+            }
+            .back-btn {
+                top: 16px;
+                left: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='Books.html'">
+        <span class="back-arrow">&#8592;</span> Back
+    </button>
+    <div class="book-detail-container">
+        <div class="book-detail-info">
+            <div class="book-detail-title" id="detailTitle">Book Title</div>
+            <div class="book-detail-meta">
+                <span id="detailAuthor">Author</span>
+                <span id="detailYear">Year</span>
+                <span id="detailCategory">Category</span>
+            </div>
+            <div class="book-detail-description" id="detailDescription">
+                Book description goes here.
+            </div>
+            <a href="#" class="book-detail-download" id="detailDownload">DOWNLOAD</a>
+        </div>
+        <img src="" alt="Book Cover" class="book-detail-cover" id="detailCover">
+    </div>
+    <script>
+        // Load book data from localStorage
+        const book = JSON.parse(localStorage.getItem('selectedBook'));
+        if (book) {
+            document.getElementById('detailTitle').textContent = book.title;
+            document.getElementById('detailAuthor').textContent = book.author || 'Unknown Author';
+            document.getElementById('detailYear').textContent = book.year || 'Year';
+            document.getElementById('detailCategory').textContent = (book.category || '').toUpperCase();
+            document.getElementById('detailDescription').textContent = book.longDescription || book.description;
+            document.getElementById('detailCover').src = book.image;
+            document.getElementById('detailCover').alt = book.title;
+            // If you have a download link, set it here
+            // document.getElementById('detailDownload').href = book.download || '#';
+        }
+    </script>
+</body>
+</html> 

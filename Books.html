@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Books - Online Library</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
@@ -13,7 +13,6 @@
     <header>
         <nav class="navbar navbar-expand justify-content-left"> 
             <ul class="navbar-nav align-items-left">
-
                 <li class="nav-item me-5 ">
                     <div class="licontainer">
                         <a href="index.html"><img src="home.png" width="25" height="25" style="transform: translateY(4px);"></a>
@@ -35,7 +34,7 @@
                     </div>
                 </li>
 
-                <li class="nav-item"></li>
+                <li class="nav-item">
                     <div class="licontainer">
                         <a href="review.html"><img src="review.png" width="20" height="20"></a>
                         <a class="cstm-navlink" href="review.html">Review</a>
@@ -44,7 +43,7 @@
             </ul>
             
             <div>
-                <a href="index.html"><img src="book (1).png"style="width: 40px "class="nav-logo"></a>
+                <a href="index.html"><img src="book (1).png" style="width: 40px" class="nav-logo"></a>
             </div>
 
             <div class="search-bar">
@@ -54,33 +53,200 @@
         </nav>
         <hr id="navline">
     </header>
-     <!-- Books Section -->
-    <div class="container">
-        <div class="row justify-content-center">
+
+    <!-- Books Section -->
+    <div class="container mt-4">
+        <div class="row justify-content-center mb-4">
             <div class="col-auto">
-                <button class="custom-btn active">All</button>
-                <button class="custom-btn active ">Crime</button>
-                <button class="custom-btn active ">Fantasy</button>
+                <button class="custom-btn active" data-category="all">All</button>
+                <button class="custom-btn" data-category="crime">Crime</button>
+                <button class="custom-btn" data-category="fantasy">Fantasy</button>
+                <button class="custom-btn" data-category="mystery">Mystery</button>
+                <button class="custom-btn" data-category="romance">Romance</button>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <div class="custom-card">
-                    <div class="card-content">
-                      <img src="read people.png" alt="Book cover" class="card-image">
-                      <div class="card-text">
-                        <h4 class="card-title">Read People Like a Book</h4>
-                        <p class="card-description">
-                          Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.
-                        </p>
-                        <!-- <a href="#" class="download-btn">Download</a> -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            
-            <!-- Additional book cards can be added here -->
+        
+        <div class="cards-container" id="booksContainer">
+            <!-- Book cards will be dynamically inserted here -->
         </div>
     </div>
+
+    <script>
+        // Book data - add more books here
+        const books = [
+            {
+                title: "Read People Like a Book",
+                author: "Patrick King",
+                year: "2021",
+                description: "Learn to understand and interpret human behavior with this insightful guide.",
+                longDescription: "The book is a practical guide to reading people and understanding their intentions, emotions, and motivations. Patrick King draws on psychological research and real-life examples to teach readers how to decode body language, facial expressions, and verbal cues. The book covers topics such as building rapport, detecting lies, and improving communication skills. It's designed for anyone who wants to enhance their social intelligence and navigate social situations with confidence.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.35 PM (1).jpeg",
+                category: "self-help"
+            },
+            {
+                title: "The Silent Patient",
+                author: "Alex Michaelides",
+                year: "2019",
+                description: "A psychological thriller about a woman who shoots her husband and then never speaks again.",
+                longDescription: "Alicia Berenson's life is seemingly perfect. A famous painter married to an in-demand fashion photographer, she lives in a grand house with big windows overlooking a park in one of London's most desirable areas. One evening her husband Gabriel returns home late from a fashion shoot, and Alicia shoots him five times in the face, and then never speaks another word. The story unfolds through the eyes of Theo Faber, a criminal psychotherapist who is determined to get Alicia to talk and unravel the mystery behind her silence.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.35 PM (2).jpeg",
+                category: "crime"
+            },
+            {
+                title: "The Midnight Library",
+                author: "Matt Haig",
+                year: "2020",
+                description: "Between life and death, a library exists where you can try out different versions of your life.",
+                longDescription: "Nora Seed finds herself faced with the possibility of changing her life for a new one, following a different career, undoing old breakups, realizing her dreams. The Midnight Library holds within its shelves an infinite number of books, each one the story of another reality. As she navigates through the library, Nora must search within herself as she travels through the Midnight Library to decide what is truly fulfilling in life, and what makes it worth living in the first place.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.35 PM.jpeg",
+                category: "fantasy"
+            },
+            {
+                title: "The Seven Husbands of Evelyn Hugo",
+                author: "Taylor Jenkins Reid",
+                year: "2017",
+                description: "A reclusive Hollywood legend reveals her life story to an unknown journalist.",
+                longDescription: "Evelyn Hugo is a reclusive Hollywood legend, known for her glamorous roles and mysterious personal life. When an unknown journalist is given the opportunity to interview her, she agrees to tell her life story. The story unfolds through flashbacks and reveals the secrets and scandals that have shaped Evelyn's life.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.36 PM (1).jpeg",
+                category: "romance"
+            },
+            {
+                title: "Project Hail Mary",
+                author: "Andy Weir",
+                year: "2021",
+                description: "An astronaut wakes up alone on a spacecraft with no memory of how he got there.",
+                longDescription: "An astronaut wakes up alone on a spacecraft with no memory of how he got there. He must use his limited resources to survive and find out what happened to the crew and the mission.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.36 PM.jpeg",
+                category: "fantasy"
+            },
+            {
+                title: "Verity",
+                author: "Colleen Hoover",
+                year: "2018",
+                description: "A struggling writer discovers a manuscript that reveals dark secrets.",
+                longDescription: "A struggling writer discovers a manuscript that reveals dark secrets. The story unfolds through the eyes of a young woman who makes a Faustian bargain to live forever and is cursed to be forgotten by everyone.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.37 PM (1).jpeg",
+                category: "mystery"
+            },
+            {
+                title: "The Invisible Life of Addie LaRue",
+                author: "V.E. Schwab",
+                year: "2020",
+                description: "A young woman makes a Faustian bargain to live forever and is cursed to be forgotten by everyone.",
+                longDescription: "A young woman makes a Faustian bargain to live forever and is cursed to be forgotten by everyone. The story unfolds through the eyes of a young woman who makes a Faustian bargain to live forever and is cursed to be forgotten by everyone.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.37 PM.jpeg",
+                category: "fantasy"
+            },
+            {
+                title: "The Thursday Murder Club",
+                author: "Richard Osman",
+                year: "2020",
+                description: "Four septuagenarians meet weekly to solve cold cases in their retirement village.",
+                longDescription: "Four septuagenarians meet weekly to solve cold cases in their retirement village. The story unfolds through the eyes of four septuagenarians who meet weekly to solve cold cases in their retirement village.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.38 PM (1).jpeg",
+                category: "mystery"
+            },
+            {
+                title: "The House in the Cerulean Sea",
+                author: "T.J. Klune",
+                year: "2020",
+                description: "A caseworker at a magical orphanage discovers a secret that could change everything.",
+                longDescription: "A caseworker at a magical orphanage discovers a secret that could change everything. The story unfolds through the eyes of a caseworker at a magical orphanage who discovers a secret that could change everything.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.38 PM (2).jpeg",
+                category: "fantasy"
+            },
+            {
+                title: "The Last Thing He Told Me",
+                author: "Laura Dave",
+                year: "2021",
+                description: "A woman's husband disappears, leaving behind a note that changes everything.",
+                longDescription: "A woman's husband disappears, leaving behind a note that changes everything. The story unfolds through the eyes of a woman whose husband disappears, leaving behind a note that changes everything.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.38 PM.jpeg",
+                category: "mystery"
+            },
+            {
+                title: "The Love Hypothesis",
+                author: "Ali Hazelwood",
+                year: "2021",
+                description: "A young scientist agrees to a fake dating arrangement with a professor.",
+                longDescription: "A young scientist agrees to a fake dating arrangement with a professor. The story unfolds through the eyes of a young scientist who agrees to a fake dating arrangement with a professor.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.39 PM (1).jpeg",
+                category: "romance"
+            },
+            {
+                title: "Klara and the Sun",
+                author: "Kazuo Ishiguro",
+                year: "2021",
+                description: "An artificial friend waits in a store, hoping to be chosen by a customer.",
+                longDescription: "An artificial friend waits in a store, hoping to be chosen by a customer. The story unfolds through the eyes of an artificial friend who waits in a store, hoping to be chosen by a customer.",
+                image: "Books/WhatsApp Image 2025-05-10 at 10.58.39 PM.jpeg",
+                category: "fantasy"
+            }
+        ];
+
+        // Function to create a book card
+        function createBookCard(book) {
+            const card = document.createElement('div');
+            card.className = 'custom-card';
+            card.dataset.category = book.category;
+            card.innerHTML = `
+                <div class="card-content">
+                    <img src="${book.image}" alt="${book.title}" class="card-image">
+                    <div class="card-text">
+                        <h4 class="card-title">${book.title}</h4>
+                        <p class="card-description">${book.description}</p>
+                    </div>
+                </div>
+            `;
+            card.addEventListener('click', function() {
+                localStorage.setItem('selectedBook', JSON.stringify(book));
+                window.location.href = 'book-detail.html';
+            });
+            return card;
+        }
+
+        // Function to display all books
+        function displayBooks(category = 'all') {
+            const container = document.getElementById('booksContainer');
+            const cards = container.querySelectorAll('.custom-card');
+            
+            
+            cards.forEach(card => {
+                card.classList.add('hiding');
+            });
+
+            
+            setTimeout(() => {
+                container.innerHTML = '';
+                
+                const filteredBooks = category === 'all' 
+                    ? books 
+                    : books.filter(book => book.category === category);
+                
+                
+                filteredBooks.forEach(book => {
+                    container.appendChild(createBookCard(book));
+                });
+            }, 300); 
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            displayBooks();
+            
+           
+            const categoryButtons = document.querySelectorAll('.custom-btn');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    button.classList.add('active');
+                
+                    displayBooks(button.dataset.category);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
