@@ -392,10 +392,6 @@
 
 /* review page */
 
-.reviewcontainer
-{
-    display: flex;
-}
 
 .star-rating 
 {
@@ -431,11 +427,17 @@ input:checked ~ label
     background-image: url('star-solid\ \(3\).svg');
 }
 
+.reviewcontainer
+{
+    display: flex;
+    justify-content: center;
+}
+
 .reviewtxtarea
 {
     margin-top: 60px;
     margin-left: 70px;
-    padding-right: 550px;
+    padding-right: 150px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     border-radius: 3px;
@@ -446,18 +448,7 @@ input:checked ~ label
 .customreviewbtn
 {
     position: absolute;
-    margin-left: 870px;
     margin-top: 200px;
-}
-
-.reviewcontainer2
-{
-    margin-top: 180px;   
-}
-.reviewcards
-{
-    display: flex;
-    flex-direction: row;
 }
 
 /* bookstyle */
@@ -478,24 +469,27 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  .custom-btn:hover {
+.custom-btn:hover 
+{
     background-color: #3a4e5f; 
     color: white;
-  }
+}
   
-  .custom-btn.active {
+.custom-btn.active 
+{
     background-color: #3a4e5f; 
     color: white;
-  }
+}
   
-  .download-btn {
+.download-btn 
+{
     background-color: white;
     color: #1c1c2a;
     padding: 8px 16px;
     border-radius: 20px;
     text-decoration: none;
     font-weight: bo
-  }
+}
 
   
   /* .download-btn {
@@ -513,7 +507,8 @@ body {
     color: white;
   } */
   
-   .custom-card {
+.custom-card 
+{
     max-width: 1000px;
     min-width: 500px;
     height: 140px;
@@ -527,21 +522,24 @@ body {
     transition: background-color 0.3s;
     display: flex;
     align-items: center;
-  }
+}
   
-  .custom-card:hover {
+.custom-card:hover 
+{
     background-color: #3a4e5f;
-  }
+}
   
-  .card-content {
+.card-content 
+{
     display: flex;
     align-items: center;
     gap: 24px;
     width: 170%;
     height: 100%;
-  }
+}
   
-  .card-image {
+.card-image 
+{
     width: 100px;
     height: 120px;
     border-radius: 10px;
@@ -551,30 +549,33 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-  }
+}
   
-  .card-text {
+.card-text 
+{
     flex: 1;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-  }
+}
   
-  .card-title {
+.card-title 
+{
     margin: 0 0 10px;
     font-size: 18px;
     color: white;
-  }
+}
   
-  .card-description {
+.card-description 
+{
     margin-top: 7px;
     margin-bottom: 12px;
     font-size: 14px;
     line-height: 1.5;
     color: white;
-  }
+}
 .cards-container
 {
     display: flex;
