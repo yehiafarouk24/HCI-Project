@@ -392,10 +392,6 @@
 
 /* review page */
 
-.reviewcontainer
-{
-    display: flex;
-}
 
 .star-rating 
 {
@@ -431,11 +427,17 @@ input:checked ~ label
     background-image: url('star-solid\ \(3\).svg');
 }
 
+.reviewcontainer
+{
+    display: flex;
+    justify-content: center;
+}
+
 .reviewtxtarea
 {
     margin-top: 60px;
     margin-left: 70px;
-    padding-right: 550px;
+    padding-right: 150px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     border-radius: 3px;
@@ -446,18 +448,7 @@ input:checked ~ label
 .customreviewbtn
 {
     position: absolute;
-    margin-left: 870px;
     margin-top: 200px;
-}
-
-.reviewcontainer2
-{
-    margin-top: 180px;   
-}
-.reviewcards
-{
-    display: flex;
-    flex-direction: row;
 }
 
 /* bookstyle */
@@ -478,27 +469,30 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  .custom-btn:hover {
+.custom-btn:hover 
+{
     background-color: #3a4e5f; 
     color: white;
-  }
+}
   
-  .custom-btn.active {
+.custom-btn.active 
+{
     background-color: #3a4e5f; 
     color: white;
-  }
+}
   
-  .download-btn {
+.download-btn 
+{
     background-color: white;
     color: #1c1c2a;
     padding: 8px 16px;
     border-radius: 20px;
     text-decoration: none;
     font-weight: bo
-  }
+}
 
   
-   .cards-container {
+.cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
@@ -600,7 +594,6 @@ body {
     color: #e0e0e0;
     opacity: 0.9;
 }
-
 
 @media (max-width: 1200px) {
     .cards-container {
