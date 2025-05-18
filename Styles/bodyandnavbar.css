@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@keyframes float
+{
+    0%, 100% 
+    {
+        transform: translateY(0);
+    }
+    50% 
+    {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float-icon
+{
+    0%, 100% 
+    {
+        transform: translateY(0);
+    }
+    50% 
+    {
+        transform: translateX(-6px);
+    }
+    
+}
+
+@keyframes float-search-icon
+{
+    0%, 100% 
+    {
+        transform: translateY(0px);
+    }
+    50% 
+    {
+        transform: translateX(-10px);
+    }
+    
+}
+
+.body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.licontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+}
+
+.licontainer:hover {
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+    opacity: 60%;
+}
+
+.licontainer-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-home:hover {
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.licontainer-books {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px 8px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-books:hover {
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.licontainer-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-about:hover {
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.licontainer-rev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px;
+    transition: all 0.5s ease;
+    background-color: #35495e;
+    border-radius: 70px;
+    animation: float-icon 2s ease-in-out infinite;
+}
+
+.licontainer-rev:hover {
+    background-color: #35495e;
+    border-radius: 70px;
+    opacity: 60%;
+}
+
+.navbar-nav {
+    margin-left: 105px;
+    align-items: center;
+}
+
+
+.search-bar {
+    background-color: #35495e;
+    border-radius: 30px;
+    margin-top: 19px;
+    margin-left: 229px;
+    align-items: center;
+    display: inline-flex;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.search-bar input[type="text"] {
+    color: white;
+    font-size: 14px;
+    flex: 1;
+    outline: none;
+    margin-bottom: -4px;
+    padding-bottom: 80px;
+    transform: translateY(-8px);
+}
+
+.search-bar input[type="image"] {
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.search-bar input:not(:placeholder-shown)+input[type="image"] {
+    animation: float-search-icon 2.3s ease-in-out infinite;
+}
+
+
+.search-bar input::placeholder {
+    opacity: 50%;
+    color: white;
+}
+
+#search {
+    background-color: transparent;
+    padding: 6px;
+    padding-bottom: 1px;
+    border: none;
+    border-color: #7b61ff;
+    margin-top: 8px;
+    font-size: 17px;
+}
+
+.cstm-navlink {
+    text-decoration: none;
+    padding-left: 15px;
+    color: white;
+}
+
+#navline {
+    border: solid 2px white;
+    opacity: 30%;
+    width: 84%;
+    text-align: center;
+    margin-left: 110px;
+}
+
+.nav-logo {
+    width: 40px;
+    margin-left: 138px;
+    margin-top: 19px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.nav-logo-btn {
+    width: 40px;
+    margin-left: 138px;
+    margin-top: 19px;
+    animation: float 3s ease-in-out infinite;
+}

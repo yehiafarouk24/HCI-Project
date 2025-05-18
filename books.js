@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "Harry Potter has never been the star of a Quidditch team, scoring points while riding a broom far above the ground. He knows no spells, has never helped to hatch a dragon, and has never worn a cloak of invisibility. All he knows is a miserable life with the Dursleys, his horrible aunt and uncle, and their abominable son, Dudley. Harry's room is a tiny closet at the foot of the stairs, and he hasn't had a birthday party in eleven years. But all that is about to change when a mysterious letter arrives by owl messenger: a letter with an invitation to an incredible place that Harry—and anyone who reads about him—will find unforgettable. For it's there that he finds not only friends, aerial sports, and magic in everything from classes to meals, but a great destiny that's been waiting for him... if Harry can survive the encounter.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.35 PM.jpeg",
                 category: "fantasy",
-                download:"Harry-Potter-and-the-Philosophers-Stone.pdf"
+                download:"books_pdfs/Harry-Potter-and-the-Philosophers-Stone.pdf"
             },
             {
                 title: "Harry Potter and the Chamber of Secrets",
@@ -51,8 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: "In his second year at Hogwarts, Harry Potter must solve the mystery of the Chamber of Secrets as students are being attacked by an unknown force.",
                 longDescription: "The Dursleys were so mean and hideous that summer that all Harry Potter wanted was to get back to the Hogwarts School for Witchcraft and Wizardry. But just as he's packing his bags, Harry receives a warning from a strange, impish creature named Dobby who says that if Harry Potter returns to Hogwarts, disaster will strike. And strike it does. For in Harry's second year at Hogwarts, fresh torments and horrors arise, including an outrageously stuck-up new professor, Gilderoy Lockhart, a spirit named Moaning Myrtle who haunts the girls' bathroom, and the unwanted attentions of Ron Weasley's younger sister, Ginny. But each of these seem minor annoyances when the real trouble begins, and someone -- or something -- starts turning Hogwarts students to stone. Could it be Draco Malfoy, a more poisonous rival than ever? Could it possibly be Hagrid, whose mysterious past is finally told? Or could it be the one everyone at Hogwarts most suspects... Harry Potter himself?",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.36 PM (1).jpeg",
-                category: "fantasy",
-                download: "books_pdfs/Harry-Potter-and-the-Philosophers-Stone.pdf"
+                category: "fantasy"
             },
             {
                 title: "Sherlock Holmes & Mr. Hyde: The Classified Dossier",
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: "Sherlock Holmes & Mr. Hyde: The Classified Dossier by James Lovegrove A thrilling mashup where Holmes confronts the infamous Mr. Hyde. Uncover a secret dossier linking Victorian London’s greatest detective to literature’s most monstrous alter ego.",
                 longDescription: "In this “exuberant, reverent mashup” (James Lovegrove), Sherlock Holmes faces his most uncanny adversary yet: Edward Hyde, the brutish counterpart to Dr. Jekyll. When a series of gruesome murders terrorizes London, Holmes and Watson uncover a classified dossier connecting the crimes to Hyde’s sinister legacy. Blending Arthur Conan Doyle’s deductive genius with Robert Louis Stevenson’s gothic horror, Lovegrove crafts a gripping tale where logic clashes with primal savagery.The narrative unfolds through case notes, encrypted letters, and Holmes’ own deductions, mimicking a clandestine investigative file. As Holmes navigates fog-drenched alleyways and shadowy laboratories, readers are plunged into a duel of wits against a foe who defies reason. Can even the Great Detective unravel a mystery where science, madness, and monstrosity intertwine? Perfect for fans of cross-genre adventures, this novel reimagines two iconic figures in a pulse-pounding battle for Victorian London’s soul.",
                 image: "Books/download.jpg",
-                category: "mystery",
+                category: "mystery"
             },
             {
                 title: "Alone in the Moor",
@@ -155,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined. Santiago's journey teaches us about the essential wisdom of listening to our hearts, recognizing opportunity, and following our dreams. Along the way, he meets various characters who guide him toward his Personal Legend, including a mysterious alchemist who teaches him to listen to his heart and follow the language of omens. Lush with evocative wisdom and magical symbolism, The Alchemist has become a modern classic, selling millions of copies around the world and transforming the lives of countless readers. This enchanting fable blends spirituality, folklore, and dream psychology into a simple yet profound tale about finding one's purpose in life.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (3).jpeg",
                 category: "philosophy",
-                downlaod: "books_pdfs/The-Alchemist.pdf"
+                downlaod: "books_pdfs\The Alchemist -- Coelho, Paulo -- 25th Anniversary Edition, 2015 -- HarperCollins Publishers -- 9780062315007 -- 9c7ed83ddf9d97875bb60be152b0c0e7 -- Anna’s Archive.pdf"
             },
             {
                 title: "The 5 AM Club",

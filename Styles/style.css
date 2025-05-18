@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 
-/* Aimation */
+/* Animation */
 
-@keyframes float
+ @keyframes float
 {
     0%, 100% 
     {
@@ -40,21 +40,22 @@
         transform: translateX(-10px);
     }
     
-}
+} */
 
-.body
+ .body
 {
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
-/* Navigation bar */
+ Navigation bar 
 
 .cstmbtn:hover
 {
     opacity: 10%;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .licontainer
@@ -244,9 +245,8 @@
     margin-left: 138px;
     margin-top: 19px;
     animation: float 3s ease-in-out infinite;
-}
+} */
 
-/* Home page */
 
 .cstmhero
 {
@@ -275,11 +275,9 @@
     padding: 10px 25px;
     margin-right: 10px;
     transition: all 0.5s ease;
-}
+} */
 
-/* About us page */
-
-.about-us-sec 
+* .about-us-sec 
 {
     color: white;
     text-align: center;
@@ -389,12 +387,12 @@
 {
     background-color: transparent ;
     border: none;
-}
+} */
 
 /* review page */
 
 
-.star-rating 
+ .star-rating 
 {
     display: flex;
     flex-direction: row-reverse;
@@ -413,19 +411,19 @@ input[type="radio"]
 {
     width: 40px;
     height: 40px;
-    background-image: url('star-regular\ \(2\).svg');
+    background-image: url('Assets/star-regular\ \(2\).svg');
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
 input:checked ~ label 
 {
-    background-image: url('star-solid\ \(3\).svg');
+    background-image: url('Assets/star-solid\ \(3\).svg');
 }
 
 .star:hover, .star:hover ~ label 
 {
-    background-image: url('star-solid\ \(3\).svg');
+    background-image: url('Assets/star-solid\ \(3\).svg');
 }
 
 .reviewcontainer
@@ -451,10 +449,16 @@ input:checked ~ label
     position: absolute;
     margin-top: 200px;
 }
-
+ 
+.revcards-container
+{
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+} */
 /* bookstyle */
   
-  .custom-btn {
+   .custom-btn {
     background-color: transparent;
     color: white;
     border: none;
@@ -724,9 +728,10 @@ body {
 }
 
 .licontainer img.nav-home-icon {
-    transform: translateY(4px);
+    transform: translateY(4px); 
 }
-recommended-books-container {
+*/
+ recommended-books-container {
     position: relative;
     margin-bottom: 60px;
 }
@@ -739,7 +744,7 @@ recommended-books-container {
     padding: 10px 0;
 }
 /* /////////////////////////////////// */
-.book-card {
+ .book-card {
     min-width: 200px;
     flex: 0 0 auto;
     background-color: #03001C;
@@ -841,4 +846,4 @@ recommended-books-container {
     .navigation-buttons {
         display: none;
     }
-}
+}  

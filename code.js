@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const username = document.querySelector('.reviewcontainer .usernamediv input[type="text"]');
     const stars = document.querySelectorAll('input[name="rating"]');
     const textarea = document.querySelector('.reviewtxtarea');
-    const submitBtn = document.querySelector('.customreviewbtn');
+    const submitBtn = document.querySelector('.customreviewbutton');
     function updateButtonState()
     {
         const starSelected = Array.from(stars).some(star => star.checked);
@@ -60,7 +60,7 @@ function handlereviewsubmitfunc()
     document.querySelector('.reviewtxtarea').value = "";
     document.querySelector('.reviewcontainer .usernamediv input[type="text"]').value = "";
     document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
-    document.querySelector('.customreviewbtn').disabled = true;
+    document.querySelector('.customreviewbutton').disabled = true;
     displayreviews();
 }
 
@@ -68,11 +68,8 @@ function handlereviewsubmitfunc()
 
 function displayreviews() {
     const reviews = JSON.parse(localStorage.getItem("userReviews")) || [];
-    const cardsContainer = document.querySelector('.cards-container');
+    const cardsContainer = document.querySelector('.revcards-container');
     const noReviewText = document.getElementById('noreviewtxt');
-    const prevButton = document.getElementById("prevreview");
-    const nextButton = document.getElementById("nextreview");
-
     cardsContainer.innerHTML = '';
 
     if (reviews.length > 0) {
@@ -94,7 +91,7 @@ function displayreviews() {
             cardHeader.textContent = review.name;
             
             const img = document.createElement('img');
-            img.setAttribute('src', 'user-solid (1).svg');
+            img.setAttribute('src', 'Assets/user-solid (1).svg');
             img.style.marginLeft = '10px';
             img.setAttribute('width', '15px');
             img.setAttribute('height', '15px');
@@ -116,7 +113,8 @@ function displayreviews() {
             const cardFooter = document.createElement('div');
             cardFooter.classList.add('card-footer', 'text-muted');
             cardFooter.textContent = review.date;
-            // Assemble the card structure
+
+
             cardBody.appendChild(cardTitle);
             cardBody.appendChild(cardText);
             cardHeader.appendChild(img);
@@ -144,10 +142,6 @@ if (book) {
     document.getElementById('detailCover').src = book.image;
     document.getElementById('detailCover').alt = book.title;
     document.getElementById('detailDownload').href = book.download;
-    // If you have a download link, set it here
-    //  document.getElementById('detailDownload').href = book.download || '#';
 }
-
-// Book data - add more books here
 
 
