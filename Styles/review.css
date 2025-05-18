@@ -20,19 +20,19 @@ input[type="radio"]
 {
     width: 40px;
     height: 40px;
-    background-image: url('Assets\star-regular (2).svg');
+    background-image: url('../Assets/star-regular\ \(2\).svg');
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
 input:checked ~ label 
 {
-    background-image: url('Assets\star-solid (3).svg');
+    background-image: url('../Assets/star-solid (3).svg');
 }
 
 .star:hover, .star:hover ~ label 
 {
-    background-image: url('Assets\star-solid (3).svg');
+    background-image: url('../Assets/star-solid (3).svg');
 }
 
 .reviewcontainer
@@ -65,6 +65,7 @@ input:checked ~ label
     font-size: 18px;
     background-color: #e64c3c;
     color: white;
+    border-style: solid;
     border-radius: 30px;
     padding: 10px 25px;
     margin-right: 10px;
