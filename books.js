@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: "A bone-chilling horror novel about a notorious haunted house with a history of disappearances and unexplained phenomena.",
                 longDescription: "Five paranormal investigators accept a challenge to spend a week in the infamous Blackwood Manor, known locally as the 'House of Pain.' For decades, the abandoned Victorian mansion has been the subject of terrifying legends and unexplained disappearances. Armed with cameras and scientific equipment, the team plans to debunk the myths surrounding the house. But as night falls, they begin to experience horrifying manifestations that defy rational explanation. One by one, the house reveals its secrets, trapping them in a nightmare where the boundary between the living and the dead dissolves. What started as a research project becomes a desperate fight for survival as they uncover the truth behind the house's dark history.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.37 PM.jpeg",
-                category: "horror",
+                category: "crime",
             },
             {
                 title: "The Ashes & the Star-Cursed King",
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: "Timeless lessons on wealth, greed, and happiness, exploring how psychology drives our relationship with money more than financial knowledge.",
                 longDescription: "In 'The Psychology of Money,' Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics. The book isn't about what to do with your money; it's about how to think more clearly about money and financial decisions. Through a series of stories and examples, Housel demonstrates that success with money isn't about what you know, but about how you behave. He argues that financial success is not a hard science—it's a soft skill where how you behave is more important than what you know. The book delves into topics like why people make irrational financial decisions, the role of luck and risk, the importance of reasonable expectations, and why wealth and happiness don't always correlate. With over seven million copies sold worldwide, this international bestseller offers invaluable insights for both seasoned investors and those just beginning their financial journey.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (1).jpeg",
-                category: "finance",
+                category: "philosophy",
                 downlaod: "books_pdfs/money.pdf"
             },
             {
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: "How to analyze, understand, and predict people's emotions, thoughts, intentions, and behaviors through practical psychology and body language analysis.",
                 longDescription: "In 'Read People Like a Book,' bestselling author and social skills coach Patrick King offers a comprehensive guide to understanding human behavior and reading people effectively. This practical manual draws on techniques from psychology, behavioral analysis, and body language interpretation to help readers decipher what others are really thinking and feeling, regardless of what they're saying. The book breaks down the complex science of human behavior into digestible chapters, covering everything from facial micro-expressions and voice tone analysis to understanding psychological motivations and emotional triggers. King provides actionable frameworks for identifying lies, detecting hidden emotions, and predicting future behaviors based on present patterns. Rather than relying on pseudoscience or generalized stereotypes, the book grounds its approach in empirical research and practical real-world applications. Whether for professional settings, personal relationships, or simply navigating social situations with greater awareness, this guide equips readers with the tools to see beyond surface-level interactions and understand the deeper meanings behind human behavior.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.41 PM.jpeg",
-                category: "psychology",
+                category: "self-help",
                 downlaod:"books_pdfs/ReadPeople.pdf"
             }
         ];

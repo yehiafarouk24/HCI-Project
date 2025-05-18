@@ -63,8 +63,6 @@ function handlereviewsubmitfunc()
     displayreviews();
 }
 
-    // comment //
-
 function displayreviews() {
     const reviews = JSON.parse(localStorage.getItem("userReviews")) || [];
     const cardsContainer = document.querySelector('.revcards-container');
