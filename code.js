@@ -1,3 +1,4 @@
+
     // to load all the needed elements from html when the document opens  and to change the submit button state // 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -125,23 +126,10 @@ function displayreviews() {
             cardDiv.appendChild(cardInnerDiv);
             cardsContainer.appendChild(cardDiv);
         });
-        if (reviews.length > 0) 
-        {
-            prevButton.removeAttribute('hidden');
-            nextButton.removeAttribute('hidden');
-        } 
-        else 
-        {
-            prevButton.setAttribute('hidden', 'hidden');
-            nextButton.setAttribute('hidden', 'hidden');
-        }
-
     } 
     else
     {
         noReviewText.removeAttribute('hidden');
-        prevButton.setAttribute('hidden', 'hidden');
-        nextButton.setAttribute('hidden', 'hidden');
     }
 }
 
@@ -155,8 +143,9 @@ if (book) {
     document.getElementById('detailDescription').textContent = book.longDescription || book.description;
     document.getElementById('detailCover').src = book.image;
     document.getElementById('detailCover').alt = book.title;
+    document.getElementById('detailDownload').href = book.download;
     // If you have a download link, set it here
-    // document.getElementById('detailDownload').href = book.download || '#';
+    //  document.getElementById('detailDownload').href = book.download || '#';
 }
 
 // Book data - add more books here
