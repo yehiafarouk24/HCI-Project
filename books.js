@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Books container found, displaying books...");
         
         // Book data
-        const books = [
+        window.books = [
             {
                 title: "Sherlock Holmes and the Hound of the Baskervilles",
                 author: "Sir Arthur Conan Doyle",
@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 category: "mystery"
             },
             {
-                title: "The Hound of the Baskervilles",
+                title: "THE COMPLETE SHERLOCK HOLMES",
                 author: "Sir Arthur Conan Doyle",
                 year: "1902",
                 description: "The classic detective novel featuring Sherlock Holmes investigating a family curse and a monstrous hound on the foggy moors.",
-                longDescription: "The Hound of the Baskervilles is the third of the four crime novels written by Sir Arthur Conan Doyle featuring the detective Sherlock Holmes. Originally serialized in The Strand Magazine from August 1901 to April 1902, it is set largely on Dartmoor in Devon in England's West Country and tells the story of an attempted murder inspired by the legend of a fearsome, diabolical hound of supernatural origin. Sherlock Holmes and his companion Dr. Watson investigate the case.",
-                image: "Books/image.png",
+                longDescription: "This meticulously crafted edition compiles every iconic adventure of Sherlock Holmes, from his debut in A Study in Scarlet to his final enigmas in The Case-Book of Sherlock Holmes. The cover, designed by Jim Tierney, immerses readers in Holmes’ shadowy world with hauntingly atmospheric visuals—think gaslit alleyways, swirling Victorian fog, and cryptic symbols woven into the design. Tierney’s bold, vintage-inspired typography and moody color palette evoke the suspense and intellect of Doyle’s detective, while subtle artistic nods (a magnifying glass, a violin, or a silhouette of the Baker Street duo) hint at the stories within.",
+                image: "Books/Jim Tierney.jpg",
                 category: "mystery",
             },
             {
@@ -52,16 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "The Dursleys were so mean and hideous that summer that all Harry Potter wanted was to get back to the Hogwarts School for Witchcraft and Wizardry. But just as he's packing his bags, Harry receives a warning from a strange, impish creature named Dobby who says that if Harry Potter returns to Hogwarts, disaster will strike. And strike it does. For in Harry's second year at Hogwarts, fresh torments and horrors arise, including an outrageously stuck-up new professor, Gilderoy Lockhart, a spirit named Moaning Myrtle who haunts the girls' bathroom, and the unwanted attentions of Ron Weasley's younger sister, Ginny. But each of these seem minor annoyances when the real trouble begins, and someone -- or something -- starts turning Hogwarts students to stone. Could it be Draco Malfoy, a more poisonous rival than ever? Could it possibly be Hagrid, whose mysterious past is finally told? Or could it be the one everyone at Hogwarts most suspects... Harry Potter himself?",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.36 PM (1).jpeg",
                 category: "fantasy",
-                download: "Harry-Potter-and-the-Chamber-of-Secrets.pdf"
+                download: "books_pdfs/Harry-Potter-and-the-Philosophers-Stone.pdf"
             },
             {
-                title: "Harry Potter and the Chamber of Secrets (Alternate Cover)",
-                author: "J.K. Rowling",
-                year: "1998",
-                description: "Harry Potter's second adventure at Hogwarts where he confronts the heir of Slytherin and the mystery of the Chamber of Secrets.",
-                longDescription: "Harry Potter's summer has been terrible. He can't wait to get back to Hogwarts School of Witchcraft and Wizardry. But when a house-elf named Dobby appears with a warning not to return to school, Harry begins to suspect danger awaits him. And it does, as strange events unfold throughout the year - writing on the walls, students petrified, and whispers of a chamber of secrets that holds a terrifying monster. With the help of his friends Ron and Hermione, Harry must uncover the truth about the chamber before the school is forced to close forever.",
-                image: "Books/WhatsApp Image 2025-05-10 at 10.58.36 PM.jpeg",
-                category: "fantasy",
+                title: "Sherlock Holmes & Mr. Hyde: The Classified Dossier",
+                author: "James Lovegrove",
+                year: "1892",
+                description: "Sherlock Holmes & Mr. Hyde: The Classified Dossier by James Lovegrove A thrilling mashup where Holmes confronts the infamous Mr. Hyde. Uncover a secret dossier linking Victorian London’s greatest detective to literature’s most monstrous alter ego.",
+                longDescription: "In this “exuberant, reverent mashup” (James Lovegrove), Sherlock Holmes faces his most uncanny adversary yet: Edward Hyde, the brutish counterpart to Dr. Jekyll. When a series of gruesome murders terrorizes London, Holmes and Watson uncover a classified dossier connecting the crimes to Hyde’s sinister legacy. Blending Arthur Conan Doyle’s deductive genius with Robert Louis Stevenson’s gothic horror, Lovegrove crafts a gripping tale where logic clashes with primal savagery.The narrative unfolds through case notes, encrypted letters, and Holmes’ own deductions, mimicking a clandestine investigative file. As Holmes navigates fog-drenched alleyways and shadowy laboratories, readers are plunged into a duel of wits against a foe who defies reason. Can even the Great Detective unravel a mystery where science, madness, and monstrosity intertwine? Perfect for fans of cross-genre adventures, this novel reimagines two iconic figures in a pulse-pounding battle for Victorian London’s soul.",
+                image: "Books/download.jpg",
+                category: "mystery",
             },
             {
                 title: "Alone in the Moor",
@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "Detective Alex Morgan has seen her share of crime scenes, but nothing like the meticulous stagings she's now encountering. At each murder scene, a bouquet of red roses sits untouched among the chaos, a calling card for a killer who seems to be leaving personal messages for her. As the body count rises across the city, Morgan races to decode the significance of the roses and connect the seemingly unrelated victims. When the investigation leads her to a cold case from her own past, Morgan realizes the killer has been watching her for years, and this elaborate game is more personal than she ever imagined. With time running out and pressure mounting from department officials, Morgan must confront her own demons to catch a killer who knows her all too well.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.38 PM.jpeg",
                 category: "crime",
+                downlaod:"books_pdfs/crime.pdf"
             },
             {
                 title: "A Court of Frost and Starlight",
@@ -134,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "In 'The Psychology of Money,' Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics. The book isn't about what to do with your money; it's about how to think more clearly about money and financial decisions. Through a series of stories and examples, Housel demonstrates that success with money isn't about what you know, but about how you behave. He argues that financial success is not a hard science—it's a soft skill where how you behave is more important than what you know. The book delves into topics like why people make irrational financial decisions, the role of luck and risk, the importance of reasonable expectations, and why wealth and happiness don't always correlate. With over seven million copies sold worldwide, this international bestseller offers invaluable insights for both seasoned investors and those just beginning their financial journey.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (1).jpeg",
                 category: "finance",
-                downlaod: "9780857197689-1.pdf"
+                downlaod: "books_pdfs/money.pdf"
             },
             {
                 title: "Atomic Habits",
@@ -144,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "In 'Atomic Habits,' James Clear presents a practical framework for improving everyday life by forming good habits, breaking bad ones, and mastering the tiny behaviors that lead to remarkable results. Drawing on established ideas from biology, psychology, and neuroscience, Clear delivers a comprehensive guide on habit formation. The book explains how small, incremental, everyday routines compound into massive, positive changes over time. Clear distills complex topics into simple behaviors that can be easily applied to daily life and work. From building a system for getting 1% better every day to breaking bad habits through understanding habit loops, the book offers actionable strategies for transforming habits. Packed with evidence-based strategies, 'Atomic Habits' teaches practical tips for installing new habits by harnessing the power of the four laws of behavior change. With millions of copies sold worldwide, this international bestseller has changed countless lives by revealing how simple changes can have life-transforming effects.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (2).jpeg",
                 category: "self-help",
-                download: "Atomic-Habits-PDF-Download.pdf"
+                download: "books_pdfs/Atomic-Habits-PDF-Download.pdf"
             },
             {
                 title: "The Alchemist",
@@ -154,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined. Santiago's journey teaches us about the essential wisdom of listening to our hearts, recognizing opportunity, and following our dreams. Along the way, he meets various characters who guide him toward his Personal Legend, including a mysterious alchemist who teaches him to listen to his heart and follow the language of omens. Lush with evocative wisdom and magical symbolism, The Alchemist has become a modern classic, selling millions of copies around the world and transforming the lives of countless readers. This enchanting fable blends spirituality, folklore, and dream psychology into a simple yet profound tale about finding one's purpose in life.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (3).jpeg",
                 category: "philosophy",
-                downlaod: "_PDFdrive.com.co_The_Alchemist.pdf"
+                downlaod: "books_pdfs/The-Alchemist.pdf"
             },
             {
                 title: "The 5 AM Club",
@@ -164,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "In 'The 5 AM Club,' legendary leadership and elite performance expert Robin Sharma introduces a morning routine that has helped his clients maximize their productivity, activate their best health, and bulletproof their serenity in this age of overwhelming complexity. Through an enchanting and often amusing story about two struggling strangers who meet an eccentric tycoon who becomes their secret mentor, The 5 AM Club shares the little-known formula Sharma has used to help his clients become world-class in their fields. The book presents the '20/20/20 formula': spending the first 20 minutes of your day exercising, the next 20 minutes reflecting, and the final 20 minutes growing. This revolutionary routine helps its practitioners build willpower, enhance creativity, boost productivity, and experience less stress. Combining cutting-edge science with ancient wisdom and proven techniques from the world's most successful people, this book shows how to transform your life and reach your highest potential by making one small change to your daily routine.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (4).jpeg",
                 category: "self-help",
-                download: "the-5am-club.pdf"
+                download: "books_pdfs/the-5am-club.pdf"
             },
             {
                 title: "Powerless",
@@ -174,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "In a world where magic is power and status, Paige Montford is the only person born without magic. Banished from her noble family for her defect, Paige has learned to survive by her wits and skill with a blade. When she's abducted and forced to participate in the Mage Trials, a deadly competition where the champions of each realm battle for glory, Paige must face competitors with devastating magical abilities while she has none. The realm's most powerful royal, Prince Aiden Callaghan, has never been defeated. Known for his cruelty in the arena, he's determined to maintain his perfect record. But when he discovers his next opponent is powerless, he's intrigued rather than dismissive. As Paige navigates the dangerous world of court politics and ancient rivalries, she finds herself drawn to the prince who should be her enemy. Their forbidden attraction complicates an already deadly game where the stakes are higher than just their lives. Set in a richly imagined world of magic and intrigue, Powerless explores themes of identity, resilience, and finding strength in unexpected places.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.40 PM.jpeg",
                 category: "fantasy",
-                downlaod: "906ee2f9-2f0a-49de-b9c0-a9fe7cc2a827_Lauren-Roberts---Powerless--2023-.pdf"
+                download: "books_pdfs/powerless.pdf"
             },
             {
                 title: "Read People Like a Book",
@@ -183,7 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: "How to analyze, understand, and predict people's emotions, thoughts, intentions, and behaviors through practical psychology and body language analysis.",
                 longDescription: "In 'Read People Like a Book,' bestselling author and social skills coach Patrick King offers a comprehensive guide to understanding human behavior and reading people effectively. This practical manual draws on techniques from psychology, behavioral analysis, and body language interpretation to help readers decipher what others are really thinking and feeling, regardless of what they're saying. The book breaks down the complex science of human behavior into digestible chapters, covering everything from facial micro-expressions and voice tone analysis to understanding psychological motivations and emotional triggers. King provides actionable frameworks for identifying lies, detecting hidden emotions, and predicting future behaviors based on present patterns. Rather than relying on pseudoscience or generalized stereotypes, the book grounds its approach in empirical research and practical real-world applications. Whether for professional settings, personal relationships, or simply navigating social situations with greater awareness, this guide equips readers with the tools to see beyond surface-level interactions and understand the deeper meanings behind human behavior.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.41 PM.jpeg",
-                category: "psychology"
+                category: "psychology",
+                downlaod:"books_pdfs/ReadPeople.pdf"
             }
         ];
 
@@ -218,8 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 booksContainer.innerHTML = '';
                 const filteredBooks = category === 'all' 
-                    ? books 
-                    : books.filter(book => book.category === category);
+                    ? window.books  
+                    : window.books.filter(book => book.category === category);
                 filteredBooks.forEach(book => {
                     booksContainer.appendChild(createBookCard(book));
                 });
@@ -240,3 +242,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+   document.addEventListener('DOMContentLoaded', () => {
+            // Set up navigation buttons
+            const container = document.querySelector('.recommended-books-scrollable');
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+            
+            if (container && prevButton && nextButton) {
+                // Calculate the scroll amount - one book card width plus margin
+                const scrollAmount = container.offsetWidth * 0.8;
+                
+                nextButton.addEventListener('click', function() {
+                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+                
+                prevButton.addEventListener('click', function() {
+                    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+            }
+        });
+        
+        // Function to save book data to localStorage and redirect to detail page
+        function saveBookAndRedirect(title, author, year, description, image, category) {
+            const book = {
+                title: title,
+                author: author,
+                year: year,
+                description: description,
+                longDescription: description,
+                image: image,
+                category: category
+            };
+            localStorage.setItem('selectedBook', JSON.stringify(book));
+            window.location.href = 'book-detail.html';
+        }
+

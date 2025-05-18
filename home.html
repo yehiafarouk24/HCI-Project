@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="code.js"></script>
+    <script src="books.js"></script>
 </head>
 <body style="background-color: #03001C">
     <header>
@@ -74,12 +75,52 @@
             </div>
     </div>
 
- <div class="container mt-4">
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="section-title" style="color: white; font-weight: bold;">Recommended Books</h2>
+            <a href="Books.html" class="view-all-link" style="color: #7b61ff; text-decoration: none; margin-right: 110px;">View All</a>
+        </div>
         
-        <div class="cards-container" id="booksContainer">
-            <!-- Book cards will be dynamically inserted here -->
+        <div class="recommended-books-container">
+            <div class="recommended-books-scrollable" id="recommendedBooksContainer">
+                <!-- Static fallback books -->
+                <div class="book-card" onclick="saveBookAndRedirect('Sherlock Holmes and the Hound of the Baskervilles', 'Sir Arthur Conan Doyle', '1902', 'A chilling mystery where Sherlock Holmes investigates the legend of a supernatural hound terrorizing the Baskerville family.', 'Books/WhatsApp Image 2025-05-10 at 10.58.35 PM (2).jpeg', 'mystery')">
+                    <img src="Books/WhatsApp Image 2025-05-10 at 10.58.35 PM (2).jpeg" alt="Sherlock Holmes" class="book-card-img">
+                    <div class="book-card-body">
+                        <h5 class="book-card-title">Sherlock Holmes</h5>
+                        <p class="book-card-author">by Sir Arthur Conan Doyle</p>
+                    </div>
+                </div>
+                <div class="book-card" onclick="saveBookAndRedirect('Atomic Habits', 'James Clear', '2018', 'An easy and proven way to build good habits and break bad ones through tiny changes that yield remarkable results.', 'Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (2).jpeg', 'self-help')">
+                    <img src="Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (2).jpeg" alt="Atomic Habits" class="book-card-img">
+                    <div class="book-card-body">
+                        <h5 class="book-card-title">Atomic Habits</h5>
+                        <p class="book-card-author">by James Clear</p>
+                    </div>
+                </div>
+                <div class="book-card" onclick="saveBookAndRedirect('Harry Potter and the Philosopher\'s Stone', 'J.K. Rowling', '1997', 'The first adventure of the young wizard Harry Potter as he discovers a magical world and his destiny at Hogwarts School of Witchcraft and Wizardry.', 'Books/WhatsApp Image 2025-05-10 at 10.58.35 PM.jpeg', 'fantasy')">
+                    <img src="Books/WhatsApp Image 2025-05-10 at 10.58.35 PM.jpeg" alt="Harry Potter" class="book-card-img">
+                    <div class="book-card-body">
+                        <h5 class="book-card-title">Harry Potter</h5>
+                        <p class="book-card-author">by J.K. Rowling</p>
+                    </div>
+                </div>
+                <div class="book-card" onclick="saveBookAndRedirect('The Ashes & the Star-Cursed King', 'Carissa Broadbent', '2022', 'The second book in the Nightborn Duet, a dark fantasy series set in the enchanting world of Nyaxia.', 'Books/WhatsApp Image 2025-05-10 at 10.58.38 PM (1).jpeg', 'fantasy')">
+                    <img src="Books/WhatsApp Image 2025-05-10 at 10.58.38 PM (1).jpeg" alt="The Ashes & the Star-Cursed King" class="book-card-img">
+                    <div class="book-card-body">
+                        <h5 class="book-card-title">The Ashes & the Star-Cursed King</h5>
+                        <p class="book-card-author">by Carissa Broadbent</p>
+                    </div>
+                </div>
+                <div class="book-card" onclick="saveBookAndRedirect('The Alchemist', 'Paulo Coelho', '1988', 'A philosophical novel about a young Andalusian shepherd who journeys to the Egyptian pyramids in search of treasure, only to find wisdom and his destiny.', 'Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (3).jpeg', 'philosophy')">
+                    <img src="Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (3).jpeg" alt="The Alchemist" class="book-card-img">
+                    <div class="book-card-body">
+                        <h5 class="book-card-title">The Alchemist</h5>
+                        <p class="book-card-author">by Paulo Coelho</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 </html>
