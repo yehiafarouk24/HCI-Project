@@ -127,20 +127,6 @@ function displayreviews() {
         noReviewText.removeAttribute('hidden');
     }
 }
-
-// Load book data from localStorage
-const book = JSON.parse(localStorage.getItem('selectedBook'));
-if (book) {
-    document.getElementById('detailTitle').textContent = book.title;
-    document.getElementById('detailAuthor').textContent = book.author || 'Unknown Author';
-    document.getElementById('detailYear').textContent = book.year || 'Year';
-    document.getElementById('detailCategory').textContent = (book.category || '').toUpperCase();
-    document.getElementById('detailDescription').textContent = book.longDescription || book.description;
-    document.getElementById('detailCover').src = book.image;
-    document.getElementById('detailCover').alt = book.title;
-    document.getElementById('detailDownload').href = book.download;
-}
-
 // Search functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Search functionality
