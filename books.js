@@ -1,8 +1,10 @@
 // JavaScript for Books page only
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("Books.js loaded");
+    
     const booksContainer = document.getElementById('booksContainer');
     if (booksContainer) {
-        console.log("Books container found, displaying books...");
+        console.log("Books container found");
         
         // Book data
         window.books = [
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 author: "Sir Arthur Conan Doyle",
                 year: "1902",
                 description: "The classic detective novel featuring Sherlock Holmes investigating a family curse and a monstrous hound on the foggy moors.",
-                longDescription: "This meticulously crafted edition compiles every iconic adventure of Sherlock Holmes, from his debut in A Study in Scarlet to his final enigmas in The Case-Book of Sherlock Holmes. The cover, designed by Jim Tierney, immerses readers in Holmes’ shadowy world with hauntingly atmospheric visuals—think gaslit alleyways, swirling Victorian fog, and cryptic symbols woven into the design. Tierney’s bold, vintage-inspired typography and moody color palette evoke the suspense and intellect of Doyle’s detective, while subtle artistic nods (a magnifying glass, a violin, or a silhouette of the Baker Street duo) hint at the stories within.",
+                longDescription: "This meticulously crafted edition compiles every iconic adventure of Sherlock Holmes, from his debut in A Study in Scarlet to his final enigmas in The Case-Book of Sherlock Holmes. The cover, designed by Jim Tierney, immerses readers in Holmes' shadowy world with hauntingly atmospheric visuals—think gaslit alleyways, swirling Victorian fog, and cryptic symbols woven into the design. Tierney's bold, vintage-inspired typography and moody color palette evoke the suspense and intellect of Doyle's detective, while subtle artistic nods (a magnifying glass, a violin, or a silhouette of the Baker Street duo) hint at the stories within.",
                 image: "Books/Jim Tierney.jpg",
                 category: "mystery",
             },
@@ -57,8 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "Sherlock Holmes & Mr. Hyde: The Classified Dossier",
                 author: "James Lovegrove",
                 year: "1892",
-                description: "Sherlock Holmes & Mr. Hyde: The Classified Dossier by James Lovegrove A thrilling mashup where Holmes confronts the infamous Mr. Hyde. Uncover a secret dossier linking Victorian London’s greatest detective to literature’s most monstrous alter ego.",
-                longDescription: "In this “exuberant, reverent mashup” (James Lovegrove), Sherlock Holmes faces his most uncanny adversary yet: Edward Hyde, the brutish counterpart to Dr. Jekyll. When a series of gruesome murders terrorizes London, Holmes and Watson uncover a classified dossier connecting the crimes to Hyde’s sinister legacy. Blending Arthur Conan Doyle’s deductive genius with Robert Louis Stevenson’s gothic horror, Lovegrove crafts a gripping tale where logic clashes with primal savagery.The narrative unfolds through case notes, encrypted letters, and Holmes’ own deductions, mimicking a clandestine investigative file. As Holmes navigates fog-drenched alleyways and shadowy laboratories, readers are plunged into a duel of wits against a foe who defies reason. Can even the Great Detective unravel a mystery where science, madness, and monstrosity intertwine? Perfect for fans of cross-genre adventures, this novel reimagines two iconic figures in a pulse-pounding battle for Victorian London’s soul.",
+                description: "Sherlock Holmes & Mr. Hyde: The Classified Dossier by James Lovegrove A thrilling mashup where Holmes confronts the infamous Mr. Hyde. Uncover a secret dossier linking Victorian London's greatest detective to literature's most monstrous alter ego.",
+                longDescription: "In this \"exuberant, reverent mashup\" (James Lovegrove), Sherlock Holmes faces his most uncanny adversary yet: Edward Hyde, the brutish counterpart to Dr. Jekyll. When a series of gruesome murders terrorizes London, Holmes and Watson uncover a classified dossier connecting the crimes to Hyde's sinister legacy. Blending Arthur Conan Doyle's deductive genius with Robert Louis Stevenson's gothic horror, Lovegrove crafts a gripping tale where logic clashes with primal savagery. The narrative unfolds through case notes, encrypted letters, and Holmes' own deductions, mimicking a clandestine investigative file. As Holmes navigates fog-drenched alleyways and shadowy laboratories, readers are plunged into a duel of wits against a foe who defies reason. Can even the Great Detective unravel a mystery where science, madness, and monstrosity intertwine? Perfect for fans of cross-genre adventures, this novel reimagines two iconic figures in a pulse-pounding battle for Victorian London's soul.",
                 image: "Books/download.jpg",
                 category: "mystery"
             },
@@ -154,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 longDescription: "Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined. Santiago's journey teaches us about the essential wisdom of listening to our hearts, recognizing opportunity, and following our dreams. Along the way, he meets various characters who guide him toward his Personal Legend, including a mysterious alchemist who teaches him to listen to his heart and follow the language of omens. Lush with evocative wisdom and magical symbolism, The Alchemist has become a modern classic, selling millions of copies around the world and transforming the lives of countless readers. This enchanting fable blends spirituality, folklore, and dream psychology into a simple yet profound tale about finding one's purpose in life.",
                 image: "Books/WhatsApp Image 2025-05-10 at 10.58.40 PM (3).jpeg",
                 category: "philosophy",
-                downlaod: "books_pdfs\The Alchemist -- Coelho, Paulo -- 25th Anniversary Edition, 2015 -- HarperCollins Publishers -- 9780062315007 -- 9c7ed83ddf9d97875bb60be152b0c0e7 -- Anna’s Archive.pdf"
+                downlaod: "books_pdfs\The Alchemist -- Coelho, Paulo -- 25th Anniversary Edition, 2015 -- HarperCollins Publishers -- 9780062315007 -- 9c7ed83ddf9d97875bb60be152b0c0e7 -- Anna's Archive.pdf"
             },
             {
                 title: "The 5 AM Club",
@@ -188,8 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ];
 
+        // Make book data available globally
+        console.log(`Made ${window.books.length} books available globally`);
+
         // Function to create a book card
-        function createBookCard(book) {
+        window.createBookCard = function(book) {
             const card = document.createElement('div');
             card.className = 'custom-card';
             card.dataset.category = book.category;
@@ -207,38 +212,64 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'book-detail.html';
             });
             return card;
-        }
+        };
 
         // Function to display all books
-        function displayBooks(category = 'all') {
-            const cards = booksContainer.querySelectorAll('.custom-card');
-            cards.forEach(card => {
-                card.classList.add('hiding');
-            });
+        window.displayBooks = function(category = 'all') {
+            console.log(`Displaying books for category: ${category}`);
             
-            setTimeout(() => {
-                booksContainer.innerHTML = '';
-                const filteredBooks = category === 'all' 
-                    ? window.books  
-                    : window.books.filter(book => book.category === category);
-                filteredBooks.forEach(book => {
-                    booksContainer.appendChild(createBookCard(book));
-                });
-            }, 300); 
-        }
-
-        // Display books immediately
-        displayBooks();
-        
-        // Set up category buttons
-        const categoryButtons = document.querySelectorAll('.custom-btn');
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                categoryButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                displayBooks(button.dataset.category);
+            // Check if we're in search mode
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchParam = urlParams.get('search');
+            
+            // Don't display books if we're in search mode - search.js will handle it
+            if (searchParam) {
+                console.log("In search mode, not displaying regular books");
+                return;
+            }
+            
+            // Clear container
+            booksContainer.innerHTML = '';
+            
+            // Filter books by category
+            const filteredBooks = category === 'all' 
+                ? window.books  
+                : window.books.filter(book => book.category === category);
+                
+            console.log(`Displaying ${filteredBooks.length} books`);
+            
+            // Display books
+            filteredBooks.forEach(book => {
+                booksContainer.appendChild(window.createBookCard(book));
             });
-        });
+        };
+
+        // Check for search query in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchParam = urlParams.get('search');
+        
+        // Only display books if we're not in search mode
+        if (!searchParam) {
+            console.log("No search parameter, displaying all books");
+            
+            // Wait a short time to ensure everything is loaded
+            setTimeout(() => {
+                window.displayBooks('all');
+                
+                // Set up category buttons
+                const categoryButtons = document.querySelectorAll('.custom-btn');
+                categoryButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Remove active class from all buttons
+                        categoryButtons.forEach(btn => btn.classList.remove('active'));
+                        // Add active class to clicked button
+                        this.classList.add('active');
+                        // Display books for the selected category
+                        window.displayBooks(this.dataset.category);
+                    });
+                });
+            }, 100);
+        }
     }
 });
 
