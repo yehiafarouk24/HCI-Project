@@ -20,19 +20,19 @@ input[type="radio"]
 {
     width: 40px;
     height: 40px;
-    background-image: url('Assets\star-regular (2).svg');
+    background-image: url('../Assets/star-regular\ \(2\).svg');
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
 input:checked ~ label 
 {
-    background-image: url('Assets\star-solid (3).svg');
+    background-image: url('../Assets/star-solid (3).svg');
 }
 
 .star:hover, .star:hover ~ label 
 {
-    background-image: url('Assets\star-solid (3).svg');
+    background-image: url('../Assets/star-solid (3).svg');
 }
 
 .reviewcontainer
