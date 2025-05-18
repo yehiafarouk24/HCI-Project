@@ -1,5 +1,4 @@
-
-    // to load all the needed elements from html when the document opens  and to change the submit button state // 
+// to load all the needed elements from html when the document opens  and to change the submit button state // 
 
 document.addEventListener("DOMContentLoaded", function () {
     const username = document.querySelector('.reviewcontainer .usernamediv input[type="text"]');
@@ -64,8 +63,6 @@ function handlereviewsubmitfunc()
     displayreviews();
 }
 
-    // comment //
-
 function displayreviews() {
     const reviews = JSON.parse(localStorage.getItem("userReviews")) || [];
     const cardsContainer = document.querySelector('.revcards-container');
@@ -76,7 +73,7 @@ function displayreviews() {
         noReviewText.setAttribute('hidden', 'hidden');
 
         reviews.forEach(review => {
-            // Create the card elements
+
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('col-md-3', 'mb-4');
             cardDiv.style.width = '310px';
@@ -102,7 +99,7 @@ function displayreviews() {
             cardBody.style.overflow = 'auto';
             const cardTitle = document.createElement('h5');
             cardTitle.classList.add('card-title');
-            cardTitle.textContent = "⭐".repeat(6 - parseInt(review.stars)); // Assuming review.stars is a string
+            cardTitle.textContent = "⭐".repeat(6 - parseInt(review.stars));
 
             const cardText = document.createElement('p');
             cardText.classList.add('card-text');
@@ -130,18 +127,4 @@ function displayreviews() {
         noReviewText.removeAttribute('hidden');
     }
 }
-
-// Load book data from localStorage
-const book = JSON.parse(localStorage.getItem('selectedBook'));
-if (book) {
-    document.getElementById('detailTitle').textContent = book.title;
-    document.getElementById('detailAuthor').textContent = book.author || 'Unknown Author';
-    document.getElementById('detailYear').textContent = book.year || 'Year';
-    document.getElementById('detailCategory').textContent = (book.category || '').toUpperCase();
-    document.getElementById('detailDescription').textContent = book.longDescription || book.description;
-    document.getElementById('detailCover').src = book.image;
-    document.getElementById('detailCover').alt = book.title;
-    document.getElementById('detailDownload').href = book.download;
-}
-
 

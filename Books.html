@@ -49,14 +49,29 @@
 
             <div class="search-bar">
                 <input type="text" id="search" placeholder="Search..">
-                <input type="image" src="Assets/Search.png" width="25" height="25">
+                <input type="image" src="Assets/Search.png" width="25" height="25" id="searchButton">
             </div>
         </nav>
         <hr id="navline">
     </header>
 
-    <!-- Books Section -->
+
     <div class="container mt-4">
+
+        <div id="searchResultsHeading" class="d-none mb-4">
+            <h3 style="color: white;">Search results for: "<span id="searchQueryDisplay"></span>"</h3>
+            <a href="Books.html" class="btn btn-sm text-white" style="background-color: #7b61ff; margin-top: 10px;">
+                Clear Search
+            </a>
+        </div>
+        
+        <div id="noResultsMessage" class="d-none text-center p-5">
+            <p style="color: white;">No books found matching your search.</p>
+            <a href="Books.html" class="btn btn-sm text-white" style="background-color: #7b61ff; margin-top: 10px;">
+                Browse All Books
+            </a>
+        </div>
+        
         <div class="row justify-content-center mb-4">
             <div class="col-auto">
                 <button class="custom-btn active" data-category="all">All</button>
@@ -65,15 +80,17 @@
                 <button class="custom-btn" data-category="crime">Crime</button>
                 <button class="custom-btn" data-category="fantasy">Fantasy</button>
                 <button class="custom-btn" data-category="mystery">Mystery</button>
-                <!-- <button class="custom-btn" data-category="romance">Romance</button> -->
+            
             </div>
         </div>
         
         <div class="cards-container" id="booksContainer">
-            <!-- Book cards will be dynamically inserted here -->
+   
+            <p style="color: white; text-align: center; padding: 20px;">Loading books...</p>
         </div>
     </div>
-    
+
     <script src="books.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>

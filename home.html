@@ -9,8 +9,95 @@
     <link rel="stylesheet" href="Styles/bodyandnavbar.css">
     <link rel="stylesheet" href="Styles/home.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    <script src="code.js"></script>
     <script src="books.js"></script>
+    <script src="code.js"></script>
+    <script src="search.js"></script>
+    <!-- Add Font Awesome for arrow icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <style>
+        /* Navigation arrows styles */
+        .recommended-books-container {
+            position: relative;
+            margin-bottom: 60px;
+        }
+        
+        .recommended-books-scrollable {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 10px 0;
+        }
+        
+        .navigation-buttons {
+            position: absolute;
+            width: 100%;
+            top: 45%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+        
+        .nav-button {
+            background-color: rgba(53, 73, 94, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            pointer-events: auto;
+            z-index: 100;
+        }
+        
+        .nav-button:hover {
+            background-color: rgba(123, 97, 255, 0.8);
+        }
+        
+        .book-card {
+            min-width: 200px;
+            flex: 0 0 auto;
+            background-color: #03001C;
+            border: 1px solid #35495e;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+            border-color: #7b61ff;
+        }
+        
+        .book-card-img {
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 1px solid #35495e;
+        }
+        
+        .book-card-body {
+            padding: 15px;
+        }
+        
+        .book-card-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .book-card-author {
+            font-size: 14px;
+            color: #e0e0e0;
+            opacity: 0.8;
+        }
+    </style> -->
+    <!-- JavaScript for navigation buttons -->
 </head>
 <body style="background-color: #03001C">
     <header>
@@ -51,11 +138,6 @@
                 <a href="home.html"><img src="Assets\book (1).png"style="width: 40px "class="nav-logo"></a>
             </div>
 
-            <div class="search-bar">
-                <input type="text" id="search" placeholder="Search.." style="padding-bottom: 1px;">
-                <input type="image" src="Assets\Search.png" width="25" height="25">
-            </div>
-
         </nav>
         <hr id="navline">
     </header>
@@ -85,7 +167,7 @@
         
         <div class="recommended-books-container">
             <div class="recommended-books-scrollable" id="recommendedBooksContainer">
-                <!-- Static fallback books -->
+           
                 <div class="book-card" onclick="saveBookAndRedirect('Sherlock Holmes and the Hound of the Baskervilles', 'Sir Arthur Conan Doyle', '1902', 'A chilling mystery where Sherlock Holmes investigates the legend of a supernatural hound terrorizing the Baskerville family.', 'Books/WhatsApp Image 2025-05-10 at 10.58.35 PM (2).jpeg', 'mystery')">
                     <img src="Books/WhatsApp Image 2025-05-10 at 10.58.35 PM (2).jpeg" alt="Sherlock Holmes" class="book-card-img">
                     <div class="book-card-body">
@@ -122,8 +204,18 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Navigation Arrows
+            <div class="navigation-buttons">
+                <button id="prevButton" class="nav-button">
+                    <i class="fa fa-chevron-left" style="color: white;"></i>
+                </button>
+                <button id="nextButton" class="nav-button">
+                    <i class="fa fa-chevron-right" style="color: white;"></i>
+                </button>
+            </div> -->
+            
         </div>
     </div>
-    
 </body>
 </html>
