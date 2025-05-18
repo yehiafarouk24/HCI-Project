@@ -65,14 +65,11 @@ function handlereviewsubmitfunc()
 
     // comment //
 
-function displayreviews() {
+function displayreviews() 
+{
     const reviews = JSON.parse(localStorage.getItem("userReviews")) || [];
     const cardsContainer = document.querySelector('.cards-container');
     const noReviewText = document.getElementById('noreviewtxt');
-    const prevButton = document.getElementById("prevreview");
-    const nextButton = document.getElementById("nextreview");
-
-    cardsContainer.innerHTML = '';
 
     if (reviews.length > 0) {
         noReviewText.setAttribute('hidden', 'hidden');
@@ -125,23 +122,10 @@ function displayreviews() {
             cardDiv.appendChild(cardInnerDiv);
             cardsContainer.appendChild(cardDiv);
         });
-        if (reviews.length > 0) 
-        {
-            prevButton.removeAttribute('hidden');
-            nextButton.removeAttribute('hidden');
-        } 
-        else 
-        {
-            prevButton.setAttribute('hidden', 'hidden');
-            nextButton.setAttribute('hidden', 'hidden');
-        }
-
     } 
     else
     {
         noReviewText.removeAttribute('hidden');
-        prevButton.setAttribute('hidden', 'hidden');
-        nextButton.setAttribute('hidden', 'hidden');
     }
 }
 
