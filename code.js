@@ -1,3 +1,4 @@
+
     // to load all the needed elements from html when the document opens  and to change the submit button state // 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -65,11 +66,14 @@ function handlereviewsubmitfunc()
 
     // comment //
 
-function displayreviews() 
-{
+function displayreviews() {
     const reviews = JSON.parse(localStorage.getItem("userReviews")) || [];
     const cardsContainer = document.querySelector('.cards-container');
     const noReviewText = document.getElementById('noreviewtxt');
+    const prevButton = document.getElementById("prevreview");
+    const nextButton = document.getElementById("nextreview");
+
+    cardsContainer.innerHTML = '';
 
     if (reviews.length > 0) {
         noReviewText.setAttribute('hidden', 'hidden');
@@ -139,8 +143,9 @@ if (book) {
     document.getElementById('detailDescription').textContent = book.longDescription || book.description;
     document.getElementById('detailCover').src = book.image;
     document.getElementById('detailCover').alt = book.title;
+    document.getElementById('detailDownload').href = book.download;
     // If you have a download link, set it here
-    // document.getElementById('detailDownload').href = book.download || '#';
+    //  document.getElementById('detailDownload').href = book.download || '#';
 }
 
 // Book data - add more books here
