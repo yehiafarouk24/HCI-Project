@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+ .star-rating 
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 70px;
+    background-color: transparent;
+}  
+
+input[type="radio"]
+{
+    display: none;
+}
+
+.star 
+{
+    width: 40px;
+    height: 40px;
+    background-image: url('Assets\star-regular (2).svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+input:checked ~ label 
+{
+    background-image: url('Assets\star-solid (3).svg');
+}
+
+.star:hover, .star:hover ~ label 
+{
+    background-image: url('Assets\star-solid (3).svg');
+}
+
+.reviewcontainer
+{
+    display: flex;
+    justify-content: center;
+}
+
+.reviewtxtarea
+{
+    margin-top: 60px;
+    margin-left: 70px;
+    padding-right: 150px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    border-radius: 3px;
+    background-color: transparent;
+    resize: none;
+}
+ 
+.revcards-container
+{
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+.customreviewbutton
+{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #e64c3c;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin-right: 10px;
+    transition: all 0.5s ease;
+    position: absolute;
+    margin-top: 200px;
+} 
+.customreviewbutton:not(:disabled):hover {
+    opacity: 10%;
+    background-color: transparent;
+    cursor: pointer;
+}
