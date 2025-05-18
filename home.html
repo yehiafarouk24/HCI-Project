@@ -14,7 +14,7 @@
     <script src="search.js"></script>
     <!-- Add Font Awesome for arrow icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+    <!-- <style>
         /* Navigation arrows styles */
         .recommended-books-container {
             position: relative;
@@ -96,28 +96,8 @@
             color: #e0e0e0;
             opacity: 0.8;
         }
-    </style>
+    </style> -->
     <!-- JavaScript for navigation buttons -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.recommended-books-scrollable');
-            const prevButton = document.getElementById('prevButton');
-            const nextButton = document.getElementById('nextButton');
-            
-            if (container && prevButton && nextButton) {
-                // Calculate the scroll amount - one book card width plus margin
-                const scrollAmount = container.offsetWidth * 0.8;
-                
-                nextButton.addEventListener('click', function() {
-                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                });
-                
-                prevButton.addEventListener('click', function() {
-                    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-                });
-            }
-        });
-    </script>
 </head>
 <body style="background-color: #03001C">
     <header>
@@ -158,11 +138,6 @@
                 <a href="home.html"><img src="Assets\book (1).png"style="width: 40px "class="nav-logo"></a>
             </div>
 
-            <div class="search-bar">
-                <input type="text" id="search" placeholder="Search.." style="padding-bottom: 1px;">
-                <input type="image" src="Assets\Search.png" width="25" height="25" id="searchButton">
-            </div>
-
         </nav>
         <hr id="navline">
     </header>
@@ -192,7 +167,7 @@
         
         <div class="recommended-books-container">
             <div class="recommended-books-scrollable" id="recommendedBooksContainer">
-                <!-- Static fallback books -->
+           
                 <div class="book-card" onclick="saveBookAndRedirect('Sherlock Holmes and the Hound of the Baskervilles', 'Sir Arthur Conan Doyle', '1902', 'A chilling mystery where Sherlock Holmes investigates the legend of a supernatural hound terrorizing the Baskerville family.', 'Books/WhatsApp Image 2025-05-10 at 10.58.35 PM (2).jpeg', 'mystery')">
                     <img src="Books/WhatsApp Image 2025-05-10 at 10.58.35 PM (2).jpeg" alt="Sherlock Holmes" class="book-card-img">
                     <div class="book-card-body">

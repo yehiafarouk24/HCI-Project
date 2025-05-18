@@ -73,7 +73,7 @@ function displayreviews() {
         noReviewText.setAttribute('hidden', 'hidden');
 
         reviews.forEach(review => {
-            // Create the card elements
+
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('col-md-3', 'mb-4');
             cardDiv.style.width = '310px';
@@ -99,7 +99,7 @@ function displayreviews() {
             cardBody.style.overflow = 'auto';
             const cardTitle = document.createElement('h5');
             cardTitle.classList.add('card-title');
-            cardTitle.textContent = "⭐".repeat(6 - parseInt(review.stars)); // Assuming review.stars is a string
+            cardTitle.textContent = "⭐".repeat(6 - parseInt(review.stars));
 
             const cardText = document.createElement('p');
             cardText.classList.add('card-text');
@@ -127,114 +127,4 @@ function displayreviews() {
         noReviewText.removeAttribute('hidden');
     }
 }
-// Search functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // Search functionality
-    const searchInput = document.getElementById('search');
-    const searchButton = document.querySelector('.search-bar input[type="image"]');
-    
-    if (searchInput && searchButton) {
-        // Handle search button click
-        searchButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            handleSearch();
-        });
-        
-        // Handle Enter key in search box
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                handleSearch();
-            }
-        });
-        
-        function handleSearch() {
-            const query = searchInput.value.trim();
-            if (query) {
-                // Get books data
-                const books = window.books || [];
-                
-                // Filter books based on search query
-                const searchResults = books.filter(book => 
-                    book.title.toLowerCase().includes(query.toLowerCase()) || 
-                    book.author.toLowerCase().includes(query.toLowerCase()) || 
-                    (book.category && book.category.toLowerCase().includes(query.toLowerCase())) ||
-                    (book.description && book.description.toLowerCase().includes(query.toLowerCase()))
-                );
-                
-                // Save results to localStorage for the Books page to use
-                localStorage.setItem('searchResults', JSON.stringify(searchResults));
-                localStorage.setItem('searchTerm', query);
-                
-                // Redirect to Books.html with search parameter
-                window.location.href = `Books.html?search=${encodeURIComponent(query)}`;
-            }
-        }
-    }
-    
-    // Check if we're on the Books page and there's a search query
-    if (window.location.href.includes('Books.html')) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const searchQuery = urlParams.get('search');
-        
-        if (searchQuery) {
-            // If we have search results in localStorage
-            const savedResults = JSON.parse(localStorage.getItem('searchResults') || '[]');
-            
-            // Display search results if booksContainer exists
-            const booksContainer = document.getElementById('booksContainer');
-            if (booksContainer) {
-                // Clear container
-                booksContainer.innerHTML = '';
-                
-                // Create search results header
-                const searchHeader = document.createElement('div');
-                searchHeader.className = 'search-results-header';
-                searchHeader.innerHTML = `
-                    <h3 style="color: white;">Search results for: "${searchQuery}"</h3>
-                    <p style="color: white;">${savedResults.length} book${savedResults.length !== 1 ? 's' : ''} found</p>
-                `;
-                searchHeader.style.marginBottom = '20px';
-                booksContainer.appendChild(searchHeader);
-                
-                // If no results found
-                if (savedResults.length === 0) {
-                    const noResults = document.createElement('div');
-                    noResults.className = 'no-results';
-                    noResults.innerHTML = '<p>No books found matching your search.</p>';
-                    noResults.style.color = 'white';
-                    noResults.style.textAlign = 'center';
-                    noResults.style.padding = '30px';
-                    booksContainer.appendChild(noResults);
-                    return;
-                }
-                
-                // Create book cards for search results
-                savedResults.forEach(book => {
-                    const card = document.createElement('div');
-                    card.className = 'custom-card';
-                    card.dataset.category = book.category || 'uncategorized';
-                    
-                    card.innerHTML = `
-                        <div class="card-content">
-                            <img src="${book.image}" alt="${book.title}" class="card-image">
-                            <div class="card-text">
-                                <h4 class="card-title">${book.title}</h4>
-                                <p class="card-description">${book.description}</p>
-                            </div>
-                        </div>
-                    `;
-                    
-                    card.addEventListener('click', function() {
-                        localStorage.setItem('selectedBook', JSON.stringify(book));
-                        window.location.href = 'book-detail.html';
-                    });
-                    
-                    booksContainer.appendChild(card);
-                });
-            }
-        }
-    }
-});
-
 

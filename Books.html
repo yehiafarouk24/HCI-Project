@@ -55,9 +55,9 @@
         <hr id="navline">
     </header>
 
-    <!-- Books Section -->
+
     <div class="container mt-4">
-        <!-- Search Results Heading (hidden by default) -->
+
         <div id="searchResultsHeading" class="d-none mb-4">
             <h3 style="color: white;">Search results for: "<span id="searchQueryDisplay"></span>"</h3>
             <a href="Books.html" class="btn btn-sm text-white" style="background-color: #7b61ff; margin-top: 10px;">
@@ -65,7 +65,6 @@
             </a>
         </div>
         
-        <!-- No Results Message (hidden by default) -->
         <div id="noResultsMessage" class="d-none text-center p-5">
             <p style="color: white;">No books found matching your search.</p>
             <a href="Books.html" class="btn btn-sm text-white" style="background-color: #7b61ff; margin-top: 10px;">
@@ -81,17 +80,16 @@
                 <button class="custom-btn" data-category="crime">Crime</button>
                 <button class="custom-btn" data-category="fantasy">Fantasy</button>
                 <button class="custom-btn" data-category="mystery">Mystery</button>
-                <!-- <button class="custom-btn" data-category="romance">Romance</button> -->
+            
             </div>
         </div>
         
         <div class="cards-container" id="booksContainer">
-            <!-- Book cards will be dynamically inserted here -->
+   
             <p style="color: white; text-align: center; padding: 20px;">Loading books...</p>
         </div>
     </div>
-    
-    <!-- Load scripts in the correct order -->
+
     <script src="books.js"></script>
     <script src="search.js"></script>
 </body>

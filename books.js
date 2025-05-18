@@ -1,4 +1,3 @@
-// JavaScript for Books page only
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Books.js loaded");
     
@@ -6,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (booksContainer) {
         console.log("Books container found");
         
-        // Book data
         window.books = [
             {
                 title: "Sherlock Holmes and the Hound of the Baskervilles",
@@ -190,10 +188,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ];
 
-        // Make book data available globally
         console.log(`Made ${window.books.length} books available globally`);
 
-        // Function to create a book card
         window.createBookCard = function(book) {
             const card = document.createElement('div');
             card.className = 'custom-card';
@@ -214,11 +210,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return card;
         };
 
-        // Function to display all books
         window.displayBooks = function(category = 'all') {
             console.log(`Displaying books for category: ${category}`);
             
-            // Check if we're in search mode
             const urlParams = new URLSearchParams(window.location.search);
             const searchParam = urlParams.get('search');
             
@@ -228,31 +222,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // Clear container
             booksContainer.innerHTML = '';
             
-            // Filter books by category
             const filteredBooks = category === 'all' 
                 ? window.books  
                 : window.books.filter(book => book.category === category);
                 
             console.log(`Displaying ${filteredBooks.length} books`);
             
-            // Display books
+
             filteredBooks.forEach(book => {
                 booksContainer.appendChild(window.createBookCard(book));
             });
         };
 
-        // Check for search query in URL
+  
         const urlParams = new URLSearchParams(window.location.search);
         const searchParam = urlParams.get('search');
-        
-        // Only display books if we're not in search mode
+  
         if (!searchParam) {
             console.log("No search parameter, displaying all books");
-            
-            // Wait a short time to ensure everything is loaded
+      
             setTimeout(() => {
                 window.displayBooks('all');
                 
@@ -260,11 +250,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const categoryButtons = document.querySelectorAll('.custom-btn');
                 categoryButtons.forEach(button => {
                     button.addEventListener('click', function() {
-                        // Remove active class from all buttons
+
                         categoryButtons.forEach(btn => btn.classList.remove('active'));
-                        // Add active class to clicked button
+
                         this.classList.add('active');
-                        // Display books for the selected category
+
                         window.displayBooks(this.dataset.category);
                     });
                 });
@@ -274,13 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
    document.addEventListener('DOMContentLoaded', () => {
-            // Set up navigation buttons
+
             const container = document.querySelector('.recommended-books-scrollable');
             const prevButton = document.getElementById('prevButton');
             const nextButton = document.getElementById('nextButton');
             
             if (container && prevButton && nextButton) {
-                // Calculate the scroll amount - one book card width plus margin
+
                 const scrollAmount = container.offsetWidth * 0.8;
                 
                 nextButton.addEventListener('click', function() {
@@ -293,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Function to save book data to localStorage and redirect to detail page
+
         function saveBookAndRedirect(title, author, year, description, image, category) {
             const book = {
                 title: title,
