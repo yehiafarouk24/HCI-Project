@@ -45,7 +45,9 @@
 
 .our-branches-sec li
 {
-    list-style-image: url(https://img.icons8.com/ios-filled/16/FFFFFF/marker.png)
+    display: block;
+    list-style-image: url(https://img.icons8.com/ios-filled/16/FFFFFF/marker.png);
+    list-style: none;
 }
 
 .branches-short-line
